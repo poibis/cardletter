@@ -14,13 +14,30 @@
     <link rel="apple-touch-icon" href="./img/dist/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="./img/dist/favicon.png" />
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="./js/sakura.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sakura.css">
+
     <title>성욱♥나윤-청첩장-</title>
 
 </head>
+<script>
+    $(function(){
+        let x = document.getElementById("bgAudio").autoplay;
+        document.getElementById("demo").innerHTML = x;
+        // $('body').sakura();
+    })
+</script>
 <body>
     안녕하세요 첫, 삽을 뜹니다.<br><br>
     main 에 강제 커밋 푸시가 되어서는 아니된다..? :: pull request
-    pull request again
-    <img src="./img/dist/favicon.png" alt="">
+    pull request again<br>
+    <img src="./img/dist/favicon.png" alt=""><br><br>
+
+    <audio id="bgAudio" controls autoplay>
+        <source src="./resource/Liebeheim.mp3" type="audio/mpeg">
+        이 문장은 여러분의 브라우저가 audio 태그를 지원하지 않을 때 화면에 표시됩니다!
+    </audio>
 </body>
 </html>
