@@ -11,3 +11,9 @@ env:
   LIGHTSAIL_HOST: ${{ secrets.LIGHTSAIL_HOST }}
   LIGHTSAIL_USERNAME: comu-lightsail-gitonly
   AWS_REGION: ap-northeast-2
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Hello, GitHub Actions!'
