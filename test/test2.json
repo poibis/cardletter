@@ -1,0 +1,22 @@
+{
+  "destination_addresses" : [ "대한민국 광주광역시" ],
+  "origin_addresses" : [ "대한민국 인천광역시" ],
+  "rows" : [
+    {
+      "elements" : [
+        {
+          "distance" : {
+            "text" : "327 km",
+            "value" : 326827
+          },
+          "duration" : {
+            "text" : "4시간 5분",
+            "value" : 14680
+          },
+          "status" : "OK"
+        }
+      ]
+    }
+  ],
+  "status" : "OK"
+}
