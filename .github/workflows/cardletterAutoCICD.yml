@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: ['main']
 
-
-
-
 jobs:
   checkout:
     runs-on: ubuntu-latest
@@ -21,4 +18,7 @@ jobs:
         key: ${{ secrets.KEY }}
         passphrase: ${{ secrets.PASSPHRASE}}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script: |
+          whoami
+          cd /var/www/cardletter
+          sudo git pull origin main
