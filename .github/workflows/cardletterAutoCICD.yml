@@ -16,9 +16,7 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.1
-        with:
-          path: /var/www/cardletter
+
       - run: ls -al
       - run: ls -al our-source
       
