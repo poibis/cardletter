@@ -26,6 +26,9 @@ echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 ## pass 암/복호 함수
 # password_hashing
 
+## js xss csrf preventing
+# https://rios.tistory.com/entry/JS-XSS-CSRF-%EA%B3%B5%EA%B2%A9-%EA%B0%80%EB%8A%A5%EC%84%B1-%EB%A7%89%EA%B8%B0%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8
+
 ## html purifier
 # https://velog.io/@inhalin/html-purifier
 
