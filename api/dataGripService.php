@@ -52,6 +52,8 @@ echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 ## loading time check
 ## progress bar (if required)
 
+### git push origin main 막자.... 방금 실수함
+### ->  https://hong-dev.github.io/bftest/master_branch/
 
 
 //$__rawBody = file_get_contents("php://input"); // 본문을 불러옴
