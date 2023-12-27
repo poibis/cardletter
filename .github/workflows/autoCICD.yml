@@ -1,4 +1,4 @@
-name: CI CD
+name: cardLetter CI/CD
 
 on:
   push:
