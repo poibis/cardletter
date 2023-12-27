@@ -39,6 +39,8 @@ echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 # click시 더보기 방식
 
 # mobile 입장 제한 스크립트 (naver redirect)
+# 카카오페이 연결링크 분기처리하여 계좌노출 설정
+# 주소창 색 설정
 # f12 키 무효화
 # 확대는 허용 scale =1
 # 사진 클릭시 slider 활성화 modal library searching
@@ -52,6 +54,8 @@ echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 ## loading time check
 ## progress bar (if required)
 
+### git push origin main 막자.... 방금 실수함
+### ->  https://hong-dev.github.io/bftest/master_branch/
 
 
 //$__rawBody = file_get_contents("php://input"); // 본문을 불러옴
