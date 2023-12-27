@@ -13,15 +13,22 @@ env:
   AWS_REGION: ap-northeast-2
 
 jobs:
-  echo:
+  checkout:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hello, GitHub Actions!'
-  pwd-ls:
-    name: PWD & LS
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print working directory
-        run: pwd
-      - name: List files
-        run: ls -al
+      - uses: actions/checkout@v4.1.1
+        with:
+          path: /var/www/cardletter
+      - run: ls -al
+      - run: ls -al our-source
+      
+      - name: AWS 인증하기
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      # AWS 인증이 완료되었는지 테스트합니다.
+      - name: AWS Lightsail에 연결되었는지 확인
+        run: aws configure list
