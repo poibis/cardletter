@@ -18,7 +18,6 @@ jobs:
     steps:
 
       - run: ls -al
-      - run: ls -al our-source
       
       - name: AWS 인증하기
         uses: aws-actions/configure-aws-credentials@v1
