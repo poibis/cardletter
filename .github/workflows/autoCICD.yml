@@ -7,7 +7,7 @@ on:
     branches: ['main']
 
 jobs:
-  checkout:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using ssh key
