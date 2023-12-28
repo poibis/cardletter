@@ -24,9 +24,8 @@
 </head>
 <script>
     $(function(){
-        let x = document.getElementById("bgAudio").autoplay;
-        document.getElementById("demo").innerHTML = x;
-        // $('body').sakura();
+        document.getElementById("bgAudio").autoplay;
+        $('body').sakura();
     })
 </script>
 <body>
@@ -35,7 +34,7 @@
     pull request again<br>
     <img src="./img/dist/favicon.png" alt=""><br><br>
 
-    <audio id="bgAudio" controls autoplay>
+    <audio controls autoplay id="bgAudio">
         <source src="./resource/Liebeheim.mp3" type="audio/mpeg">
         이 문장은 여러분의 브라우저가 audio 태그를 지원하지 않을 때 화면에 표시됩니다!
     </audio>
