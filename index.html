@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="Description" content="고맙습니다. 정성욱,강나윤의 청첩장입니다." />
+    <meta name="Description" content="2023년 3월 30일 17:20 더베뉴지강서 네이처홀" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="apple-mobile-web-app-status-bar-style" content="pink" />
 
@@ -14,40 +14,59 @@
     <link rel="apple-touch-icon" href="./img/dist/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="./img/dist/favicon.png" />
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="./js/sakura.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/sakura.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/library/ScrollMagic.min.js"></script>
+    <script src="./js/library/debug.addIndicators.min.js"></script>
+    <script src="./js/library/gsap.min.js"></script>
+    <script src="./js/library/TweenMax.min.js"></script>
+    <script src="./js/library/animation.gsap.js"></script>
 
-    <title>성욱♥나윤-청첩장-</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="./css/sakura.min.css">
+
+<!--    <title>성욱,나윤 결혼합니다💑🎉</title>-->
+    <title>test</title>
 
 </head>
-<script>
-    $(function(){
-        document.getElementById("bgAudio").autoplay;
-        $('body').sakura();
-    })
-</script>
-<body>
-    안녕하세요 첫, 삽을 뜹니다.<br><br>
-    main 에 강제 커밋 푸시가 되어서는 아니된다..? :: pull request
-    pull request again<br>
-    <img src="./img/dist/favicon.png" alt=""><br><br>
 
-    <audio controls autoplay id="bgAudio">
-        <source src="./resource/Liebeheim.mp3" type="audio/mpeg">
-        이 문장은 여러분의 브라우저가 audio 태그를 지원하지 않을 때 화면에 표시됩니다!
-    </audio>
-    <br><br>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <!--<div class="sakura_cover"></div>-->
+    <div class="info_box animate-flicker" style="position: fixed; top:5px; right:50px;">
+        <div class="info_box_pull">배경음악을 키고 끌 수 있어요</div>
+    </div>
 
-        <div class="scroll-down">
-            cccc
-            <a>
+    <div id="trigger_1"></div>
+    <div class="cover_img" style="background-color:#8346ff; ">배경1</div>
+    <div class="wrap_cover" >
+        <div class="content_wrap" style="width: 95%; height: auto; max-width: 720px; margin: auto;  border-radius:10px; padding: 15px;"></div>
+        <div class="start_comment1 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; top:50%; width: 100%; font-size:14px;">안녕하세요 첫, 삽을 뜹니다.</div>
+        <div class="start_comment2 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; top:50%; width: 100%; font-size:14px;">main 에 강제 커밋 푸시가 되어서는 아니</div>
+        <div class="start_comment3 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; top:50%; width: 100%; font-size:14px;">pull request agai</div>
+        <div class="start_comment4 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; top:50%; width: 100%; font-size:14px;">test2</div>
 
-                <span></span>
-            </a>
-            dddd
+
+        <!--<img src="./img/dist/favicon.png" alt=""><br><br>-->
+
+
+        <div style="position: fixed; top:10px; right:25px;">
+            <img class="vol_control " src="./img/dist/mute.png" data-icon="OFF" style="width:30px; height:30px;">
         </div>
-    up
+        <br><br>
+
+            <div class="scroll-down">
+                cccc
+                <a>
+
+                    <span></span>
+                </a>
+                dddd
+            </div>
+        up
+    </div>
+    <div style="height:5000px;"></div>
+    <script src="./js/sakura.min.js"></script>
+    <script src="./js/base.js"></script>
+    <script src="./js/scrollAction.js"></script>
+
 </body>
 </html>

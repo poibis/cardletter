@@ -7,9 +7,13 @@
 html {
     font-family: 'Pretendard-Regular', serif;
     scroll-behavior: smooth;
+    margin : 0 auto;
 }
 a { text-decoration-line: none; }
 
+body { width: 100%; height: auto; margin : 0 auto; }
+.wrap_cover { margin : 0 auto; background-color: #fffaf5; width: 100%; max-width: 720px; }
+.sakura_cover { width: 100%; max-width: 100%; height:100%; max-height:100%; position: fixed; top:0; left:0; background-color: #ffeedd;}
 .scroll-down a {
     padding-top: 70px;
 }
@@ -53,4 +57,44 @@ a { text-decoration-line: none; }
         transform: rotate(-45deg) translate(-20px, 20px);
         opacity: 0;
     }
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+.animate-flicker {
+    -webkit-animation: flickerAnimation 3s infinite;
+    -moz-animation: flickerAnimation 3s infinite;
+    -o-animation: flickerAnimation 3s infinite;
+    animation: flickerAnimation 3s infinite;
+}
+
+/* bubble pointer */
+.info_box_pull {position:relative; padding: 10px 5px 10px 5px; right:25px; width:190px; color: #131313; border-radius: 10px; border: 1px solid #131313; background-color: #FFFFFF;}
+.info_box_pull:after {content:""; position: absolute; top: 15px; right: -10px; border-left: 10px solid #131313; border-top: 5px solid transparent; border-bottom: 5px solid transparent;}
+/* bubble pointer */
+
+.cover_img {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
+    background-size: 150% 100%;
+    width: 100%;
+    min-height: 100%;
+    opacity: 0.1;
 }

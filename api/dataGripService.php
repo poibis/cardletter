@@ -41,7 +41,7 @@ echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 # mobile 입장 제한 스크립트 (naver redirect)
 # 카카오페이 연결링크 분기처리하여 계좌노출 설정
 # 주소창 색 설정
-# f12 키 무효화
+# f12 키 무효화, 우클릭 무효화
 # 확대는 허용 scale =1
 # 사진 클릭시 slider 활성화 modal library searching
 # 모바일 해상도는 최적화해서 맞춘다
