@@ -14,12 +14,23 @@ a { text-decoration-line: none; }
 body { width: 100%; height: auto; margin : 0 auto; }
 .wrap_cover { margin : 0 auto; background-color: #fffaf5; width: 100%; max-width: 720px; }
 .sakura_cover { width: 100%; max-width: 100%; height:100%; max-height:100%; position: fixed; top:0; left:0; background-color: #ffeedd;}
+
+
+.cover_img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    position: fixed;
+    top:0;
+    left:0;
+}
+.scroll-down { position: fixed; top: 80%; left: 50%; }
 .scroll-down a {
     padding-top: 70px;
 }
 .scroll-down a span {
     position: absolute;
-    top: 0;
+    top: 80%;
     left: 50%;
     width: 24px;
     height: 24px;
@@ -87,14 +98,7 @@ body { width: 100%; height: auto; margin : 0 auto; }
 }
 
 /* bubble pointer */
-.info_box_pull {position:relative; padding: 10px 5px 10px 5px; right:25px; width:190px; color: #131313; border-radius: 10px; border: 1px solid #131313; background-color: #FFFFFF;}
-.info_box_pull:after {content:""; position: absolute; top: 15px; right: -10px; border-left: 10px solid #131313; border-top: 5px solid transparent; border-bottom: 5px solid transparent;}
+.info_box_pull {position:relative; padding: 5px 5px 5px 5px; right:15px; font-size:12px; width:150px; color: #131313; border-radius: 10px; border: 1px solid #131313; background-color: #FFFFFF;}
+.info_box_pull:after {content:""; position: absolute; top: 7px; right: -10px; border-left: 10px solid #131313; border-top: 5px solid transparent; border-bottom: 5px solid transparent;}
 /* bubble pointer */
 
-.cover_img {
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple);
-    background-size: 150% 100%;
-    width: 100%;
-    min-height: 100%;
-    opacity: 0.1;
-}

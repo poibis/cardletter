@@ -3,7 +3,8 @@
 * */
 
 let tween = gsap.timeline();
-tween.to(".start_comment1", {y:-10, opacity: 1, duration:150} );
+tween.to(".start_comment0", {opacity: 0, duration:150} );
+tween.to(".start_comment1", {y:-10, opacity: 1, duration:150, delay: 100} );
 tween.to(".start_comment1", {opacity: 0, duration:150, delay: 100} );
 tween.to(".start_comment2", {y:-10, opacity: 1, duration:150});
 tween.to(".start_comment2", {opacity: 0, duration:150, delay: 100} );
@@ -11,7 +12,7 @@ tween.to(".start_comment3", {y:-10, opacity: 1, duration:150});
 tween.to(".start_comment3", {opacity: 0, duration:150, delay: 100} );
 tween.to(".start_comment4", {y:-10, opacity: 1, duration:150});
 tween.to(".start_comment4", {opacity: 0, duration:150, delay: 100} );
-tween.to(".cover_img", {scale: 0.5, duration:500});
+tween.to(".cover_img", {scale: 0.5, brightness:100, duration:500});
 
 const controller = new ScrollMagic.Controller();
 

@@ -1,5 +1,9 @@
 // domReady
 $(function() {
+
+    $("body").css("display","none");
+    $("body").fadeIn(3500);
+
     const audioSource = "./resource/Liebeheim.mp3";
     const bg_audio = new Audio();
     bg_audio.src            = audioSource;
@@ -17,7 +21,7 @@ $(function() {
         } else {
             volume.dataset.icon = "ON";
             $(this).attr('src',"./img/dist/volume.png");
-            bg_audio.load();
+            bg_audio.play();
         }
 
     })
