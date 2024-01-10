@@ -1,15 +1,12 @@
 // domReady
 $(function() {
 
-    $("body").css("display","none");
-    $("body").fadeIn(3500);
+    $("body").css("display","none").fadeIn(3500);
 
     const audioSource = "./resource/Liebeheim.mp3";
     const bg_audio = new Audio();
     bg_audio.src            = audioSource;
-    bg_audio.autoplay       = true;
     bg_audio.loop           = true;
-    bg_audio.load();
     $('.sakura_cover').sakura();
 
     $('.vol_control').click(function(){
