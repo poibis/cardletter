@@ -1,0 +1,24 @@
+name: cardLetter CI/CD
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@v1.0.1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        passphrase: ${{ secrets.PASSPHRASE}}
+        port: ${{ secrets.PORT }}
+        script: |
+          whoami
+          cd /var/www/cardletter
+          sudo git pull origin main
