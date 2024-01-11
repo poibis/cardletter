@@ -20,7 +20,8 @@ tween.to(".start_comment7", {y:-10, opacity: 1, duration:3000});
 tween.to(".start_comment8", {opacity: 1, duration:3000, delay: 3000});
 tween.to(".start_comment7", {opacity: 0, duration:3000, delay: 3000} );
 tween.to(".info_box", {visibility: "hidden", duration:1, delay: 1} );
-tween.to(".cover_img", {scale: 0.75, filter: "brightness(100%)", duration:5000});
+tween.to(".cover_img", {filter: "brightness(100%)", duration:3000});
+tween.to(".cover_div", {width: '90%', scale: 0.75, duration:3000});
 tween.to(".start_comment_final", {y:-20, opacity: 1, duration:1500, delay: 300} );
 
 const controller = new ScrollMagic.Controller();
@@ -33,5 +34,32 @@ new ScrollMagic.Scene({
 
     .setPin(".pin_div", {pushFollowers:true})
     .setTween(tween)
+    .on("start", function() {
+        $('.cover_div').css({'position':'fixed'});
+    })
+    .on("progress", function() {
+        $('.cover_div').css({'position':'fixed'});
+    })
+    .on("leave", function() {
+        $('.cover_div').css({'position':'relative'});
+    })
     .addTo(controller)
     .addIndicators({name: "set_bg_trigger_1(duration:5000)"})
+
+
+
+/*
+new ScrollMagic.Scene({
+    triggerElement: "#trigger_2",
+    duration: 2000,
+    triggerHook: "onLeave",
+})
+    .on("start", function() {
+        $('.cover_div').css('position','relative');
+    })
+    .on("leave", function() {
+        $('.cover_div').css('position','fixed');
+    })
+    .addTo(controller)
+    .addIndicators({name: "set_bg_trigger_2(duration:2000)"})
+*/
