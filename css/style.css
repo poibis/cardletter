@@ -25,7 +25,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; }
     transform: translate(-50%, 0);
     top:0;
     z-index:1;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 0 10px 5px #b4b4b4;
 }
 
 .cover_img {

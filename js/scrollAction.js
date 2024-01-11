@@ -20,15 +20,15 @@ tween.to(".start_comment7", {y:-10, opacity: 1, duration:3000});
 tween.to(".start_comment8", {opacity: 1, duration:3000, delay: 3000});
 tween.to(".start_comment7", {opacity: 0, duration:3000, delay: 3000} );
 tween.to(".info_box", {visibility: "hidden", duration:1, delay: 1} );
-tween.to(".cover_img", {filter: "brightness(100%)", duration:3000});
-tween.to(".cover_div", {width: '90%', scale: 0.75, duration:3000});
-tween.to(".start_comment_final", {y:-20, opacity: 1, duration:1500, delay: 300} );
+tween.to(".cover_img", {filter: "brighgittness(100%)", duration:3000});
+tween.to(".cover_div", {width: '90%', scale: 0.8, duration:3000});
+/*tween.to(".start_comment_final", {y:-20, opacity: 1, duration:1500, delay: 300} );*/
 
 const controller = new ScrollMagic.Controller();
 
 new ScrollMagic.Scene({
     triggerElement: "#trigger_1",
-    duration: 6000,
+    duration: 5000,
     triggerHook: "onLeave",
 })
 
