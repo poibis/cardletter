@@ -30,7 +30,7 @@
     <script src="./js/library/TweenMax.min.js"></script>
     <script src="./js/library/animation.gsap.js"></script>
     <script src="./js/library/wow.min.js"></script>
-    <script src="./js/fancybox.js"></script>
+    <script src="./js/library/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
     <link rel="stylesheet" href="./css/style.css" media="screen and (max-width: 1080px)">
@@ -38,12 +38,12 @@
     <link type="text/css" rel="stylesheet" href="./css/wave.css"        media="screen and (max-width: 1080px)">
     <link type="text/css" rel="stylesheet" href="./css/animate.min.css" media="screen and (max-width: 1080px)">
     <link type="text/css" rel="stylesheet" href="./css/fancybox.css"    media="screen and (max-width: 1080px)">
+    <!--<link type="text/css" rel="stylesheet" href="./css/jquery-ui.min.css"    media="screen and (max-width: 1080px)">-->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
 <!--    <title>성욱,나윤 결혼합니다💑🎉</title>-->
     <title>test</title>
-
 </head>
 
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -90,7 +90,7 @@
     <div style="position: relative;">
         <img id="myimg" src="https://plant-design-src.s3.ap-northeast-2.amazonaws.com/images/pc/snapshot/package/PACKAGE_00000.png" style="position:absolute; top:0; left:0; z-index:2; width: 100%; height: auto;" alt="scroll_img">
     </div>
-    <div>
+    <div class="wow animate__fadeInUp" data-wow-duration="1.5s">
         <div class="flex flex-wrap gap-5 justify-center max-w-5xl mx-auto px-6">
             <a data-fancybox="gallery" href="https://lipsum.app/id/46/1600x1200">
                 <img class="rounded" src="https://lipsum.app/id/46/200x150" />
@@ -103,10 +103,17 @@
             </a>
         </div>
     </div>
+
+    <div class="datepicker">
+        <div class="datepicker-header"></div>
+    </div>
+
+
     <div style="height:5000px;"></div>
     <script src="./js/sakura.min.js"></script>
     <script src="./js/base.js"></script>
     <script src="./js/scrollAction.js"></script>
+    <script src="./js/fancybox.js"></script>
 
 </body>
 </html>

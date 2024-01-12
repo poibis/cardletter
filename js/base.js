@@ -28,6 +28,12 @@ $(function() {
         }
 
     })
+
+    $(".datepicker").datepicker({
+        prevText: '<',
+        nextText: '>'
+    });
+
 });
 
 // windowLoad
@@ -42,3 +48,15 @@ $(document).keydown(function (e) {
         return false;
     }
 })*/
+
+// wow js
+new WOW(
+    {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset: 300,
+        mobile: true,
+        live: true
+    }
+).init();
+
