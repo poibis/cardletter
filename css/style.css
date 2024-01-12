@@ -1,9 +1,16 @@
 @font-face {
     font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    src: url('./font/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Parisienne';
+    src: url('./font/Parisienne-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 html {
     font-family: 'Pretendard-Regular', serif;
     scroll-behavior: smooth;
@@ -17,27 +24,35 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; }
 
 
 .cover_div {
-    width:100%;
+    /*width:100%;
     height:100%;
-    position:fixed;
     background-color:#FFFFFF;
     left: 50%;
     transform: translate(-50%, 0);
     top:0;
     z-index:1;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.19), 0 6px 15px 10px rgba(0,0,0,0.23);*/
+
+    margin: auto;
+    padding: 0;
+    background-image: url("http://localhost/cardletter/img/dist/test_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    background-attachment: scroll;
+    height: 100vh;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.19), 0 6px 15px 10px rgba(0,0,0,0.23);
 }
 
 .cover_img {
-    position:relative;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-image: url("http://localhost/cardletter/img/dist/test_bg.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    object-fit: cover;
-    width:100%;
-    height:100%;
+    z-index: 3;
 
     filter: brightness(70%);
 }
@@ -118,4 +133,16 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; }
 .info_box_pull {position:relative; padding: 5px 5px 5px 5px; right:15px; font-size:12px; width:150px; color: #131313; border-radius: 10px; border: 1px solid #131313; background-color: #FFFFFF;}
 .info_box_pull:after {content:""; position: absolute; top: 7px; right: -10px; border-left: 10px solid #131313; border-top: 5px solid transparent; border-bottom: 5px solid transparent;}
 /* bubble pointer */
+
+.box {
+    width:90%;
+    height:auto;
+    margin:auto;
+    background-color:#FFFFFF;
+    border-radius:15px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px 10px #FFFFFF;
+    padding: 5px 8px 5px 8px;
+
+}
 

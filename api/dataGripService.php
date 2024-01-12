@@ -57,6 +57,8 @@ echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
 ### git push origin main 막자.... 방금 실수함
 ### ->  https://hong-dev.github.io/bftest/master_branch/
 
+## wow js 활용
+
 
 //$__rawBody = file_get_contents("php://input"); // 본문을 불러옴
 //$__getData = array(json_decode($__rawBody)); // 데이터를 변수에 넣고
