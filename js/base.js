@@ -1,6 +1,12 @@
 // domReady
 $(function() {
 
+    /*// mobile only check
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // 안드로이드 아이폰을 검사해 체크
+    if(!isMobile) {
+        location.href="https://www.naver.com";
+    }*/
+
     $("body").css("display","none").fadeIn(3500);
 
     const audioSource = "./resource/Liebeheim.mp3";

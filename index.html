@@ -8,15 +8,14 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="Description" content="2024년 3월 30일 17:20 더베뉴지강서 네이처홀" />
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="pink" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fffaf5" />
+    <meta name="theme-color" content="#fffaf5">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.jswjake.xyz/cardletter">
     <meta property="og:title" content="성욱,나윤 결혼합니다💑🎉">
     <meta property="og:image" content="./img/dist/thumbs.png">
-
     <meta property="og:description" content="2024년 3월 30일 17:20 더베뉴지강서 네이처홀">
-
     <meta property="og:site_name" content="성욱,나윤 결혼합니다💑🎉">
     <meta property="og:locale" content="ko_KR">
 
@@ -30,9 +29,17 @@
     <script src="./js/library/gsap.min.js"></script>
     <script src="./js/library/TweenMax.min.js"></script>
     <script src="./js/library/animation.gsap.js"></script>
+    <script src="./js/library/wow.min.js"></script>
+    <script src="./js/fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link type="text/css" rel="stylesheet" media="screen" href="./css/sakura.min.css">
+    <link rel="stylesheet" href="./css/style.css" media="screen and (max-width: 1080px)">
+    <link type="text/css" rel="stylesheet" href="./css/sakura.min.css"  media="screen and (max-width: 1080px)">
+    <link type="text/css" rel="stylesheet" href="./css/wave.css"        media="screen and (max-width: 1080px)">
+    <link type="text/css" rel="stylesheet" href="./css/animate.min.css" media="screen and (max-width: 1080px)">
+    <link type="text/css" rel="stylesheet" href="./css/fancybox.css"    media="screen and (max-width: 1080px)">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
 <!--    <title>성욱,나윤 결혼합니다💑🎉</title>-->
     <title>test</title>
@@ -51,21 +58,50 @@
     </div>
 
     <div id="trigger_1"></div>
-    <div class="cover_div"><img class="cover_img" src="./img/dist/bg_img.jpg" alt="first_img" style="filter: brightness(70%);"></div>
+
+    <div class="pin_div">
+        <div class="cover_div"></div>
+    </div>
     <div class="wrap_cover" >
-
-        <div class="start_comment0 bg_txt" style="text-align:center; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:14px;">스크롤을 내려보세요 😀</div>
-        <div class="start_comment1 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:14px;">안녕하세요 첫, 삽을 뜹니다.</div>
-        <div class="start_comment2 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:14px;">main 에 강제 커밋 푸시가 되어서는 아니</div>
-        <div class="start_comment3 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:14px;">pull request agai</div>
-        <div class="start_comment4 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:14px;">test2</div>
-
-
-        <!--<img src="./img/dist/favicon.png" alt=""><br><br>-->
+        <div class="start_comment0 bg_txt" style="text-align:center; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:16px;">스크롤을 내려보세요 😀</div>
+        <div class="start_comment1 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:16px;">안녕하세요.</div>
+        <div class="start_comment2 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:16px;">믿음과 사랑으로 한 가정을 이루고자 </div>
+        <div class="start_comment3 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:16px;">소중한 분들을 모시고 혼인의 서약을 맺으려 합니다.</div>
+        <div class="start_comment4 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:16px;">오셔서 따뜻한 마음으로 축하해 주시면</div>
+        <div class="start_comment5 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:16px;">더없는 기쁨으로 간직하겠습니다.</div>
+        <div class="start_comment6 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:16px;">당신을 초대 할 수있어 진심으로 </div>
+        <div class="start_comment7 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:16px;"><span class="start_comment8" style="opacity: 0;">감사</span>합니다.</div>
         <br><br>
+        <div class="scroll-down"><a><span></span></a></div>
+    </div>
+    <div style="height:50px;"></div>
+    <div id="top_pin" class="box">
+        <!--<div class="wave_box"><div class="wave"></div></div>-->
+        <div style="font-size:20px; text-align: center;"><span style="font-family: Parisienne,serif;">test1</span></div>
+        <div style="font-size:20px; text-align: center;">test2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: Parisienne,serif;">and</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test4</div>
+    </div>
+        <!--<div class="start_comment_final bg_txt" style="text-align:center; opacity: 0; color:#000000; position:inherit; z-index:2; top:30%; width: 100%; font-size:20px; font-weight: 500;">정성욱   ❤   강나윤</div>-->
+<!--        <div class="cover_div">-->
+            <!--<img class="cover_img" src="./img/dist/bg_img.jpg" alt="first_img">-->
+            <!--<img class="cover_img" src="./img/dist/test_bg.jpg" alt="first_img">-->
+<!--        </div>-->
 
-            <div class="scroll-down"><a><span></span></a></div>
-        up
+    <div id="trigger_2"></div>
+    <div style="position: relative;">
+        <img id="myimg" src="https://plant-design-src.s3.ap-northeast-2.amazonaws.com/images/pc/snapshot/package/PACKAGE_00000.png" style="position:absolute; top:0; left:0; z-index:2; width: 100%; height: auto;" alt="scroll_img">
+    </div>
+    <div>
+        <div class="flex flex-wrap gap-5 justify-center max-w-5xl mx-auto px-6">
+            <a data-fancybox="gallery" href="https://lipsum.app/id/46/1600x1200">
+                <img class="rounded" src="https://lipsum.app/id/46/200x150" />
+            </a>
+            <a data-fancybox="gallery" href="https://lipsum.app/id/47/1600x1200">
+                <img class="rounded" src="https://lipsum.app/id/47/200x150" />
+            </a>
+            <a data-fancybox="gallery" href="https://lipsum.app/id/51/1600x1200">
+                <img class="rounded" src="https://lipsum.app/id/51/200x150" />
+            </a>
+        </div>
     </div>
     <div style="height:5000px;"></div>
     <script src="./js/sakura.min.js"></script>

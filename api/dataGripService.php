@@ -119,6 +119,8 @@ english version [string들을 배열로 놓고 html에서 호출
 부모님용 만들고 
 */
 
+## wow js 활용
+
 
 //$__rawBody = file_get_contents("php://input"); // 본문을 불러옴
 //$__getData = array(json_decode($__rawBody)); // 데이터를 변수에 넣고
