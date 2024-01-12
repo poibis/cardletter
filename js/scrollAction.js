@@ -26,7 +26,7 @@ tween.to(".cover_div", {width: '90%', duration:3000});
 
 const controller = new ScrollMagic.Controller();
 
- new ScrollMagic.Scene({
+new ScrollMagic.Scene({
     triggerElement: "#trigger_1",
     duration: 6000,
     triggerHook: "0",
