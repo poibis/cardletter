@@ -18,10 +18,11 @@ html {
 }
 a { text-decoration-line: none; }
 
-body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; }
+body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; color:#555555;}
 .wrap_cover { margin : 0 auto; background-color: #fffaf5; width: 100%; max-width: 720px; }
 .sakura_cover { width: 100%; max-width: 100%; height:100%; max-height:100%; position: fixed; top:0; left:0; background-color: #ffeedd;}
 
+.cover { width: 87%; height: auto; margin: auto; background-color: #fdfdfd; border-radius:10px; box-shadow: 0 19px 38px rgba(0,0,0,0.2), 0 15px 12px rgba(0,0,0,0.2); padding: 5px 5px 5px 5px; text-align: center; }
 
 .cover_div {
     /*width:100%;
@@ -43,6 +44,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; }
     background-attachment: scroll;
     height: 100vh;
     box-shadow: 0 2px 20px rgba(0,0,0,0.19), 0 6px 15px 10px rgba(0,0,0,0.23);
+    filter: brightness(50%);
 }
 
 .cover_img {
@@ -130,7 +132,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; }
 }
 
 /* bubble pointer */
-.info_box_pull {position:relative; padding: 5px 5px 5px 5px; right:15px; font-size:12px; width:150px; color: #131313; border-radius: 10px; border: 1px solid #131313; background-color: #FFFFFF;}
+.info_box_pull {position:relative; padding: 5px 5px 5px 5px; right:15px; font-size:12px; width:fit-content; color: #131313; border-radius: 10px; border: 1px solid #131313; background-color: #FFFFFF;}
 .info_box_pull:after {content:""; position: absolute; top: 7px; right: -10px; border-left: 10px solid #131313; border-top: 5px solid transparent; border-bottom: 5px solid transparent;}
 /* bubble pointer */
 
@@ -180,7 +182,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; }
     font-size: 1.4em;
     padding: 0 5px;
     margin-top: -8px;
-    color: #ddd;
+    color: #aaa;
     transition: .6s;
 }
 .datepicker .ui-datepicker-header .ui-datepicker-next {
@@ -197,7 +199,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; }
     text-align: center;
 }
 .datepicker .ui-datepicker-calendar thead {
-    color: #ddd;
+    color:#aaa;
 }
 .datepicker .ui-datepicker-calendar tr th,
 .datepicker .ui-datepicker-calendar tr td {
@@ -220,15 +222,54 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; }
     color: #000;
     transition: .7s;
     transform: scale(1);
-    border:1px solid #000000;
+    border:1px solid #000;
 }
-.datepicker .ui-datepicker-calendar .ui-state-highlight {
+/*.datepicker .ui-datepicker-calendar .ui-state-highlight {
     background: #fffaf5;
-    border:1px solid #000000;
+    border:1px solid #000;
     color: #000;
 }
 .datepicker .ui-datepicker-calendar .ui-state-highlight:hover {
     color: #000;
+}*/
+
+.datepicker .ui-datepicker-calendar .ui-state-active {
+    background: #fffaf5;
+    border:1px solid #000;
+    color: #000;
 }
+
 /*datepicker*/
 
+
+/* neon */
+
+.neon {
+    color: #fffaf5;
+    line-height: 9vw;
+    text-shadow: 0 0 3vw #ffd4ab;
+}
+
+.neon {
+    animation: neon 2.1s ease infinite;
+    -moz-animation: neon 2.1s ease infinite;
+    -webkit-animation: neon 2.1s ease infinite;
+}
+
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #ffd4ab, 0 0 3vw #ffd4ab, 0 0 10vw #ffd4ab, 0 0 10vw #ffd4ab, 0 0 .4vw #ffd4ab, .5vw .5vw .1vw #ffd4ab;
+        color: #ffffff;
+    }
+    50% {
+        text-shadow: 0 0 .5vw #b79879, 0 0 1.5vw #b79879, 0 0 5vw #b79879, 0 0 5vw #b79879, 0 0 .2vw #b79879, .5vw .5vw .1vw #b79879;
+        color: #ffffff;
+    }
+}
+/* neon */
+
+/* gallery */
+.cover_gallery { display: flex; }
+.cover_gallery img { width: 45%; margin: 2% 2% 2% 2%;}
+/* gallery */

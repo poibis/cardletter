@@ -21,7 +21,7 @@ tween.to(".start_comment8", {opacity: 1, duration:3000, delay: 3000});
 tween.to(".start_comment7", {opacity: 0, duration:3000, delay: 3000} );
 tween.to(".info_box", {visibility: "hidden", duration:1, delay: 1} );
 /*tween.to(".cover_img", {filter: "brightness(100%)", duration:3000});*/
-tween.to(".cover_div", {width: '90%', duration:3000});
+tween.to(".cover_div", {width: '90%', filter: "brightness(100%)", duration:3000});
 /*tween.to(".start_comment_final", {y:-20, opacity: 1, duration:1500, delay: 300} );*/
 
 const controller = new ScrollMagic.Controller();

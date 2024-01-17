@@ -29,10 +29,51 @@ $(function() {
 
     })
 
+    const newDate = new Date(2024, 2, 30,0 ,0, 0);
+
     $(".datepicker").datepicker({
-        prevText: '<',
-        nextText: '>'
-    });
+        dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+        dayNamesMin: ['일','월','화','수','목','금','토'],
+        monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        prevText: '',
+        nextText: '',
+        firstDay : 0,
+        showMonthAfterYear:true,
+        defaultDate: newDate,
+    }).datepicker( "setDate", newDate);
+
+    $('.ui-datepicker-year').text($('.ui-datepicker-year').html()+'년');
+
+
+    function getClock() {
+        const date = new Date();
+
+    }
+
+
+    function diffDay() {
+        let chkTime = setInterval(function() {
+            const masTime = new Date("2024-03-30 17:20:00");
+            const todayTime = new Date();
+
+            const diff = masTime - todayTime;
+
+            const diffDay = Math.floor(diff / (1000*60*60*24));
+            const diffHour = Math.floor((diff / (1000*60*60)) % 24);
+            const diffMin = Math.floor((diff / (1000*60)) % 60);
+            const diffSec = Math.floor(diff / 1000 % 60);
+
+            $(".d-day").text( `${diffDay}일 ${diffHour}시간 ${diffMin}분 ${diffSec}초 뒤`);
+
+            if(diff < 0) {
+                clearInterval(chkTime);
+                $(".d-day").text( `모두 감사합니다.`);
+            }
+        })
+
+    }
+    diffDay();
 
 });
 
