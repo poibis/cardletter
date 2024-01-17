@@ -270,6 +270,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
 /* neon */
 
 /* gallery */
-.cover_gallery { display: flex; }
-.cover_gallery img { width: 45%; margin: 2% 2% 2% 2%;}
+.cover_gallery { display: flex; justify-content: space-between; flex-wrap: wrap; }
+.cover_gallery a { width: 33%; }
+.cover_gallery img { width: 100%; }
 /* gallery */
