@@ -75,7 +75,7 @@ $(function() {
     }
     diffDay();
 
-    const mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    const mapContainer = document.getElementById('navi_map'), // 지도를 표시할 div
         mapOption = {
             center: new kakao.maps.LatLng(37.56020032129378, 126.83930631305121), // 지도의 중심좌표
             level: 3 // 지도의 확대 레벨
