@@ -109,7 +109,7 @@ $(function() {
 
 // windowLoad
 $(window).on('load',function() {
-    $('.sakura_cover').sakura();
+    /*$('.sakura_cover').sakura();*/
 });
 
 /*$('#stop_sakura').on('click', function() {
