@@ -21,7 +21,7 @@ tween.to(".start_comment8", {opacity: 1, duration:3000, delay: 3000});
 tween.to(".start_comment7", {opacity: 0, duration:3000, delay: 3000} );
 tween.to(".info_box", {visibility: "hidden", duration:1, delay: 1} );
 /*tween.to(".cover_img", {filter: "brightness(100%)", duration:3000});*/
-tween.to(".cover_div", {width: '90%', duration:3000});
+tween.to(".cover_div", {width: '90%', filter: "brightness(100%)", duration:3000});
 /*tween.to(".start_comment_final", {y:-20, opacity: 1, duration:1500, delay: 300} );*/
 
 const controller = new ScrollMagic.Controller();
@@ -79,9 +79,9 @@ $(window).scroll(function(){
     let scrollPosition = $(this).scrollTop();
 
     if(scrollPosition > topPin) {
-        gsap.to("#top_pin", { position: 'fixed', top: 0, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 1 });
+        gsap.to("#top_pin", { position: 'fixed', top: 0, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 0.1 });
     } else {
-        gsap.to("#top_pin", { position: '', width: "90%", padding:"5px 8px 5px 8px", borderRadius: "1px solid #FFFFFF", boxShadow:"0 0 10px 10px #FFFFFF", duration: 1 });
+        gsap.to("#top_pin", { position: '', width: "90%", padding:"5px 8px 5px 8px", borderRadius: "1px solid #FFFFFF", boxShadow:"0 0 10px 10px #FFFFFF", duration: 0.1 });
 
     }
 })
