@@ -112,6 +112,10 @@ $(window).on('load',function() {
     $('.sakura_cover').sakura();
 });
 
+$('#stop_sakura').on('click', function() {
+    $('body').sakura('stop');
+});
+
 //  keydown block
 /*
 $(document).keydown(function (e) {
