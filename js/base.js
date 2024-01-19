@@ -41,15 +41,16 @@ $(function() {
         firstDay : 0,
         showMonthAfterYear:true,
         defaultDate: newDate,
+        onSelect: function(e){
+            $(this).datepicker('setDate', newDate);
+            console.log($('.ui-datepicker-year').text());
+            $('.ui-datepicker-year').text($('.ui-datepicker-year').text()+'년');
+        }
     }).datepicker( "setDate", newDate);
 
-    $('.ui-datepicker-year').text($('.ui-datepicker-year').html()+'년');
 
-
-    function getClock() {
-        const date = new Date();
-
-    }
+    $('.ui-datepicker-year').after('년');
+    $('.ui-datepicker-month').attr('class','txt_highlight');
 
 
     function diffDay() {
@@ -95,6 +96,10 @@ $(document).keydown(function (e) {
     }
 })*/
 
+$(document).on('change', '.ui-datepicker-year', function(e) {
+    const year = $('.ui-datepicker-year option:selected').text();
+    $('.ui-datepicker-year').text(year);
+})
 // wow js
 new WOW(
     {
