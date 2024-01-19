@@ -18,9 +18,10 @@ html {
 }
 a { text-decoration-line: none; }
 
-body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; color:#555555;}
-.wrap_cover { margin : 0 auto; background-color: #fffaf5; width: 100%; max-width: 720px; }
-.sakura_cover { width: 100%; max-width: 100%; height:100%; max-height:100%; position: fixed; top:0; left:0; background-color: #ffeedd;}
+/* #fffaf5*/
+body { width: 100%; height: auto; margin : 0 auto; background-color:#F1ED89; color:#555555;}
+.wrap_cover { margin : 0 auto; background-color: #F1ED89; width: 100%; max-width: 720px; }
+.sakura_cover { width: 100%; max-width: 100%; height:100%; max-height:100%; position: fixed; top:0; left:0; background-color: #ffeedd; z-index: 1;}
 
 .cover { width: 87%; height: auto; margin: auto; background-color: #fdfdfd; border-radius:10px; box-shadow: 0 19px 38px rgba(0,0,0,0.2), 0 15px 12px rgba(0,0,0,0.2); padding: 5px 5px 5px 5px; text-align: center; }
 
@@ -207,7 +208,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
     cursor: pointer;
 }
 .datepicker .ui-datepicker-calendar a:hover {
-    background: #fffaf5;
+    background: #F1ED89;
     color: #000;
     transition: .7s;
     transform: scale(1);
@@ -223,7 +224,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
 }*/
 
 .datepicker .ui-datepicker-calendar .ui-state-active {
-    background: #fffaf5;
+    background: #F1ED89;
     border:1px solid #000;
     color: #000;
 }
@@ -234,7 +235,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
 /* neon */
 
 .neon {
-    color: #fffaf5;
+    color: #F1ED89;
     line-height: 9vw;
     text-shadow: 0 0 3vw #ffd4ab;
 }
