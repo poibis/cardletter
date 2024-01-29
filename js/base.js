@@ -80,6 +80,12 @@ $(function() {
     diffDay();
 
 
+    $('.map_toggled').on('click', (e)=>{
+        $(".map_toggled").removeClass('toggle_selected');
+        let mapSelected = e.target.id;
+        $("#"+mapSelected).addClass('toggle_selected');
+    })
+
     /**
     * ? easter_egg
     * */
