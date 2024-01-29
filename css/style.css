@@ -252,6 +252,49 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
 
 /*datepicker*/
 
+/*transportation*/
+.cont_findway .list_ride .ico_traffic {
+    float: left;
+    margin-right: 6px;
+}
+.bus_direct {
+    background-position: -240px -410px;
+    height: 16px;
+    width: 26px;
+}
+.bus_airport {
+    background-position: -30px -410px;
+    height: 16px;
+    width: 26px;
+}
+.bus_town {
+    background-position: -330px -410px;
+    height: 16px;
+    width: 26px;
+}
+.bus_blue {
+    background-position: 0 -410px
+}
+.bus_green {
+    background-position: -60px -410px;
+    height: 16px;
+    width: 26px;
+}
+.bus_normal {
+    background-position: -150px -410px;
+}
+
+.ico_traffic {
+    background: url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/ico_traffic_220511.png) no-repeat;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    line-height: 999px;
+    overflow: hidden;
+    vertical-align: top
+}
+/*transportation*/
+
 
 /* neon */
 
