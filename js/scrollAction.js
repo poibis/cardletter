@@ -28,23 +28,23 @@ const controller = new ScrollMagic.Controller();
 
 new ScrollMagic.Scene({
     triggerElement: "#trigger_1",
-    duration: 6000,
+    duration: 4000,
     triggerHook: "0",
 })
 
     .setPin(".pin_div", {pushFollowers:true})
     .setTween(tween)
     .addTo(controller)
-    .addIndicators({name: "set_bg_trigger_1(duration:5000)"})
+    .addIndicators({name: "set_bg_trigger_1(duration:4000)"})
 
 const topPin    = $('#top_pin').offset().top;
 const middlePin    = $('#middle_pin').offset().top;
 
 // define images
 let images = [];
-for(let i=0; i<51; i++) {
-    i = i<10 ? '0'+i : i;
-    images.push('https://plant-design-src.s3.ap-northeast-2.amazonaws.com/images/pc/snapshot/package/PACKAGE_000'+i+'.png');
+for(let i=1; i<141; i++) {
+    //i = i<10 ? '0'+i : i;
+    images.push('./img/sequence/'+i+'.jpg');
 }
 
 // TweenMax can tween any property of any object. We use this object to cycle through the array
@@ -69,11 +69,11 @@ const packageObj = imgTween.to(obj, 0.1,
 // build scene
 new ScrollMagic.Scene({
     triggerElement: "#trigger_2",
-    duration: 1000,
-    triggerHook: "0.3",
+    duration: 600,
+    triggerHook: "0.5",
 })
     .setTween(packageObj)
-    .addIndicators({name: "image sequence (duration:1000)"})
+    .addIndicators({name: "image sequence (duration:600)"})
     .addTo(controller);
 
 $(window).scroll(function(){
@@ -81,14 +81,21 @@ $(window).scroll(function(){
 
     if(scrollPosition > topPin) {
         gsap.to("#top_pin", { position: 'fixed', top: 0, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 0.1, zIndex: 3 });
+        $("#pin_top").css('display','block');
     } else {
         gsap.to("#top_pin", { position: '', width: "90%", padding:"5px 8px 5px 8px", borderRadius: "1px solid #FFFFFF", boxShadow:"0 0 10px 10px #FFFFFF", duration: 0.1, zIndex: 3 });
+        $("#pin_top").css('display','none');
     }
 
-    if(scrollPosition + 120 > middlePin) {
+    if(scrollPosition + 60 > middlePin) {
         gsap.to("#middle_pin", { position: 'fixed', top: 61, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 0.1, zIndex: 4 });
+        $("#pin_middle").css('display','block');
+
+        $('.scroll-down').css('display','none');
     } else {
         gsap.to("#middle_pin", { position: '', width: "90%", padding:"5px 8px 5px 8px", borderRadius: "1px solid #FFFFFF", boxShadow:"0 0 10px 10px #FFFFFF", duration: 0.1, zIndex: 4 });
+        $("#pin_middle").css('display','none');
+        $('.scroll-down').css('display','block');
     }
 })
 

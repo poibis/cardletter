@@ -32,6 +32,36 @@ $(function() {
 
     })
 
+    /**
+     * ? preload image cache 처리
+     *
+    **/
+    let imgSrcs = [];
+    //const IMG_PRE_URL = "https://www.jswjake.xyz/carletter/img/sequence";
+    const IMG_PRE_URL = "./img/sequence";
+    for (let i = 1; i < 141; i++) {
+        imgSrcs.push(`${IMG_PRE_URL}/`+i+`.jpg`);
+    }
+
+    function preloadImage(src) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve;
+            img.onerror = reject;
+        })
+    }
+
+    async function preloadImages() {
+        const startTime = new Date().getTime();
+        await
+            Promise.all(imgSrcs.map(preloadImage));
+        const endTime = new Date().getTime();
+        console.log($('.time').html(endTime - startTime));
+    }
+
+    preloadImages();
+
     const newDate = new Date(2024, 2, 30,0 ,0, 0);
 
     $(".datepicker").datepicker({
@@ -46,7 +76,6 @@ $(function() {
         defaultDate: newDate,
         onSelect: function(e){
             $(this).datepicker('setDate', newDate);
-            console.log($('.ui-datepicker-year').text());
             $('.ui-datepicker-year').text($('.ui-datepicker-year').text()+'년');
         }
     }).datepicker( "setDate", newDate);
@@ -128,4 +157,15 @@ new WOW(
         live: true
     }
 ).init();
+
+
+console.log(`
+%c     ██ ███████ ██     ██    ██     ██  ██████  ██████  ██      ██████  
+%c     ██ ██      ██     ██    ██     ██ ██    ██ ██   ██ ██      ██   ██ 
+%c     ██ ███████ ██  █  ██    ██  █  ██ ██    ██ ██████  ██      ██   ██ 
+%c██   ██      ██ ██ ███ ██    ██ ███ ██ ██    ██ ██   ██ ██      ██   ██ 
+%c █████  ███████  ███ ███      ███ ███   ██████  ██   ██ ███████ ██████  
+                                                                                                                                            
+
+`, "color:#22577A", "color:#38A3A5", "color:#57CC99", "color:#80ED99", "color:#99FFED",);
 
