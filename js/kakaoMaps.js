@@ -37,6 +37,9 @@ infowindow.open(map, marker);
      // 마우스 드래그로 지도 이동 가능여부를 설정합니다
      map.setDraggable(draggable);
 
-     $(".map_toggled").removeClass('toggle_selected');
-     $(this).addClass('toggle_selected');
+     if(draggable === true) {
+         $('#block_map').css('display','none');
+     } else {
+         $('#block_map').css('display','block');
+     }
  }
