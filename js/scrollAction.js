@@ -35,7 +35,7 @@ new ScrollMagic.Scene({
     .setPin(".pin_div", {pushFollowers:true})
     .setTween(tween)
     .addTo(controller)
-    .addIndicators({name: "set_bg_trigger_1(duration:4000)"})
+    //.addIndicators({name: "set_bg_trigger_1(duration:4000)"})
 
 const topPin    = $('#top_pin').offset().top;
 const middlePin    = $('#middle_pin').offset().top;
@@ -73,7 +73,7 @@ new ScrollMagic.Scene({
     triggerHook: "0.5",
 })
     .setTween(packageObj)
-    .addIndicators({name: "image sequence (duration:600)"})
+    //.addIndicators({name: "image sequence (duration:600)"})
     .addTo(controller);
 
 $(window).scroll(function(){

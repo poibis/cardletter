@@ -16,7 +16,7 @@ $(function() {
     const bg_audio = new Audio();
     bg_audio.src            = audioSource;
     bg_audio.loop           = true;
-    $('.sakura_cover').sakura();
+    /*$('.sakura_cover').sakura();*/
 
     $('.vol_control').click(function(){
         const volume = document.querySelector(".vol_control");
