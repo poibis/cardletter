@@ -173,6 +173,8 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
     background-image: url("../img/dist/calender_img.jpg");
     background-size: 100%;
 }
+.datepicker-header-img { width: 100%; height: 100%; object-fit: cover;}
+
 .datepicker .ui-datepicker-inline {
     padding: 30px;
 }

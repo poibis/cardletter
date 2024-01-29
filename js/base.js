@@ -1,14 +1,14 @@
 // domReady
 $(function() {
 
-    /*// mobile only check
+    // mobile only check
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // 안드로이드 아이폰을 검사해 체크
     if(!isMobile) {
         location.href="https://www.naver.com";
-    }*/
+    }
 
     /* start at top 0 */
-    /*window.scrollTo(0,0);*/
+    window.scrollTo(0,0);
 
     $("body").css("display","none").fadeIn(3500);
 
@@ -57,7 +57,7 @@ $(function() {
         await
             Promise.all(imgSrcs.map(preloadImage));
         const endTime = new Date().getTime();
-        console.log($('.time').html(endTime - startTime));
+        console.log(endTime - startTime);
     }
 
     preloadImages();
@@ -136,12 +136,11 @@ $(window).on('load',function() {
 });*/
 
 //  keydown block
-/*
 $(document).keydown(function (e) {
     if(e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73) ) {
         return false;
     }
-})*/
+})
 
 $(document).on('change', '.ui-datepicker-year', function(e) {
     const year = $('.ui-datepicker-year option:selected').text();
