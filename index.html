@@ -43,8 +43,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
-<!--    <title>성욱,나윤 결혼합니다💑🎉</title>-->
-    <title>test</title>
+    <title>성욱,나윤 결혼합니다💑🎉</title>
+<!--    <title>test</title>-->
 </head>
 
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -52,7 +52,7 @@
     <div class="info_box animate-flicker" style="position: fixed; z-index:2; top:5px; right:50px;">
         <div class="info_box_pull"><? echo 'test'; ?>배경음악을 키고 끌 수 있어요</div>
     </div>
-    <div style="position: fixed; z-index:2; top:10px; right:25px;">
+    <div style="position: fixed; z-index:5; top:10px; right:25px;">
 
         <img class="vol_control " src="./img/dist/mute.png" data-icon="OFF" style="width:20px; height:20px;" alt="volume">
 
@@ -77,21 +77,19 @@
     <div id="trigger_2"></div>
     <div style="height:50px;"></div>
     <div id="top_pin" class="box">
-        <div style="font-size:20px; text-align: center;"><span style="font-family: Parisienne,serif;">test1</span></div>
-        <div style="font-size:20px; text-align: center;">test2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: Parisienne,serif;">and</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test4</div>
+        <div style="font-size:20px; text-align: center;"><span style="font-family: Parisienne,serif;">wedding ceremony</span></div>
+        <div style="font-size:20px; text-align: center;">정성욱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: Parisienne,serif;">and</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강나윤</div>
     </div>
-        <!--<div class="start_comment_final bg_txt" style="text-align:center; opacity: 0; color:#000000; position:inherit; z-index:2; top:30%; width: 100%; font-size:20px; font-weight: 500;">정성욱   ❤   강나윤</div>-->
-<!--        <div class="cover_div">-->
-            <!--<img class="cover_img" src="./img/dist/bg_img.jpg" alt="first_img">-->
-            <!--<img class="cover_img" src="./img/dist/test_bg.jpg" alt="first_img">-->
-<!--        </div>-->
+    <div id="pin_top" style="height:58px; display:none;"></div>
 
-    <div class="">
+    <div class="time"></div>
+    <div style="height:600px;">
         <div style="position: relative;">
-            <img id="myimg" src="https://plant-design-src.s3.ap-northeast-2.amazonaws.com/images/pc/snapshot/package/PACKAGE_00000.png" style="position:absolute; top:0; left:0; z-index:2; width: 100%; height: auto;" alt="scroll_img">
+            <img id="myimg" src="./img/sequence/1.jpg" style="position:absolute; top:0; left:0; z-index:2; width: 100%; height: auto;" alt="scroll_img">
         </div>
 
-        <div style="height:400px;"></div>
+        <div style="height:550px;"></div>
+        <div id="pin_middle" style="height:54px; display:none;"></div>
         <div id="middle_pin" class="box">
             <div style="font-size:17px; text-align: center;">2024.03.30 토 17:20PM</div>
             <div style="font-size:17px; text-align: center;">강서 더베뉴지서울 네이쳐홀</div>
@@ -103,25 +101,21 @@
         <div class="datepicker">
             <div class="datepicker-header"></div>
         </div>
-    </div>
-
-
-    <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
         <!--결혼식까지-->
         <div  style="text-align:center;">
             <span class="title_txt">&nbsp;&nbsp;&nbsp;- 결혼식까지 -&nbsp;&nbsp;&nbsp;</span><br><br>
         </div>
         <div class="neon d-day"></div>
         <div><span style="font-family: Parisienne,serif;">Wedding</span></div>
-
     </div>
+
 
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
         <!--주차 안내-->
         <div style="text-align:center;">
             <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 주차 안내 -&nbsp;&nbsp;&nbsp;</span><br><br>
             지하 2층 ~ 지상 5층 까지,<br>약 1,200대 주차 공간이 마련 되어 있습니다.<br>
-            2시간 무료 주차 가능합니다.
+            2시간 무료 주차 가능합니다.<br><br>
         </div>
 
     </div>
@@ -130,12 +124,34 @@
         <div style="text-align:center;">
             <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 오시는 길 -&nbsp;&nbsp;&nbsp;</span><br><br>
         </div>
-        <div class="block_cover" id="block_map" style="position: absolute; top:0; left:0; width:100%; height:450px; z-index: 3;"></div>
+        <div style="display: flex; justify-content:center; text-align: left; padding: 0 15px 0 15px; align-items: center;">
+            <div style="font-size:14px; width: 80%;">
+                <span style="font-weight: 500; font-size:17px; color:#111111;">더베뉴지서울 1층 네이쳐홀</span><br>
+                서울특별시 강서구 등촌제3동 강서로 388<br>
+                Tel. 02-2657-2100
+            </div>
+            <div style="display: flex; justify-content: center; width: 20%;">
+                <div style="border-radius: 30px; background-color: #ffeedd; width: 85%; height: 50px; display: flex; justify-content: center; align-items: center;">
+                    <a href="tel:02-2657-2100">
+                    <img src="./img/dist/phone.png" alt="phone" style="width:25px; height:25px; vertical-align: middle;">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="block_cover" id="block_map" style="position: absolute; top:130px; left:0; width:100%; height:450px; z-index: 3;"></div>
         <div id="navi_map" style="width:100%; height:400px;"></div>
         <div style="height:25px;"></div>
         <div style="display: flex; justify-content: center;">
             <button id="toggled1" class="button-10 map_toggled" onclick="setDraggable(true)">지도 이동 켜기</button>
             <button id="toggled2" class="button-10 map_toggled toggle_selected" onclick="setDraggable(false)">지도 이동 끄기</button>
+        </div>
+        <div style="height:25px;"></div>
+        <div style="display: flex; align-items: center; justify-content: center; font-size:13px;">
+            <div style="margin:0 12px 0 12px;"><a href="https://surl.tmobiapi.com/1380fa8f" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="https://play-lh.googleusercontent.com/WcrqQ9atNdC7dp4vG4fWue0kRdMxiDSTKu9E1Zj7EmGcgdQ8j3u9_2Tt8vw-zPvKCkg=w240-h480-rw"></a><br>티맵</div>
+            <div style="margin:0 12px 0 12px;"><a href="https://place.map.kakao.com/m/8700757" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="https://play-lh.googleusercontent.com/tmKbM_kM31bRZoU1SkKw2LB30CFdm-MZYP0XBxlJzhYuJfbulrMi_P88VOxuZszXhPk=w240-h480-rw"></a><br>카카오네비</div>
+            <div style="margin:0 12px 0 12px;"><a href="https://naver.me/xpaA3PA3" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="https://play-lh.googleusercontent.com/BaWUhtRONqb2Tt0ESjnaEH9KiaAUnOlFJqGzGUYN6oPsEEpZhPwQeHZhuGcM1Y8g1Io=w240-h480-rw"></a><br>네이버지도</div>
+            <div style="margin:0 12px 0 12px;"><a href="https://kko.to/3Cer6cVET_" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="https://play-lh.googleusercontent.com/pPTTNz433EYFurg2j__bFU5ONdMoU_bs_-yS2JLZriua3iHrksGP6XBPF5VtDPlpGcW4=w240-h480-rw"></a><br>카카오맵</div>
         </div>
         <div style="height:25px;"></div>
     </div>
@@ -145,32 +161,32 @@
         <div style="text-align:center;"><span style="font-family: Parisienne,serif;">Gallery</span></div>
         <div class="" data-wow-duration="1.5s">
             <div class="cover_gallery">
-                <a data-fancybox="gallery" href="https://lipsum.app/id/46/1600x1200">
-                    <img class="rounded" src="https://lipsum.app/id/46/200x150" alt="gallery_img"/>
+                <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/1.jpg">
+                    <img class="rounded" src="./img/gallery/1.jpg" alt="gallery_img"/>
                 </a>
-                <a data-fancybox="gallery" href="https://lipsum.app/id/47/1600x1200">
-                    <img class="rounded" src="https://lipsum.app/id/47/200x150" alt="gallery_img"/>
+                <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/2.jpg">
+                    <img class="rounded" src="./img/gallery/2.jpg" alt="gallery_img"/>
                 </a>
-                <a data-fancybox="gallery" href="https://lipsum.app/id/51/1600x1200">
-                    <img class="rounded" src="https://lipsum.app/id/51/200x150" alt="gallery_img"/>
+                <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/3.jpg">
+                    <img class="rounded" src="./img/gallery/3.jpg" alt="gallery_img"/>
                 </a>
-                <a data-fancybox="gallery" href="https://lipsum.app/id/51/1600x1200">
-                    <img class="rounded" src="https://lipsum.app/id/51/200x150" alt="gallery_img"/>
+                <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/4.jpg">
+                    <img class="rounded" src="./img/gallery/4.jpg" alt="gallery_img"/>
                 </a>
-                <a data-fancybox="gallery" href="https://lipsum.app/id/51/1600x1200">
-                    <img class="rounded" src="https://lipsum.app/id/51/200x150" alt="gallery_img"/>
+                <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/5.jpg">
+                    <img class="rounded" src="./img/gallery/5.jpg" alt="gallery_img"/>
                 </a>
-                <a data-fancybox="gallery" href="https://lipsum.app/id/51/1600x1200">
-                    <img class="rounded" src="https://lipsum.app/id/51/200x150" alt="gallery_img"/>
+                <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/6.jpg">
+                    <img class="rounded" src="./img/gallery/6.jpg" alt="gallery_img"/>
                 </a>
-                <a data-fancybox="gallery" href="https://lipsum.app/id/51/1600x1200">
-                    <img class="rounded" src="https://lipsum.app/id/51/200x150" alt="gallery_img"/>
+                <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/7.jpg">
+                    <img class="rounded" src="./img/gallery/7.jpg" alt="gallery_img"/>
                 </a>
-                <a data-fancybox="gallery" href="https://lipsum.app/id/46/1600x1200">
-                    <img class="rounded" src="https://lipsum.app/id/46/200x150" alt="gallery_img"/>
+                <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/8.gif">
+                    <img class="rounded" src="./img/gallery/8.gif" alt="gallery_img"/>
                 </a>
-                <a data-fancybox="gallery" href="https://lipsum.app/id/46/1600x1200">
-                    <img class="rounded" src="https://lipsum.app/id/46/200x150" alt="gallery_img"/>
+                <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/9.jpg">
+                    <img class="rounded" src="./img/gallery/9.jpg" alt="gallery_img"/>
                 </a>
             </div>
         </div>
@@ -219,7 +235,7 @@
     </div>
     <div style="height:20px;"></div>
 
-    <script src="./js/sakura.min.js"></script>
+    <!--<script src="./js/sakura.min.js"></script>-->
     <script src="./js/base.js"></script>
     <script src="./js/scrollAction.js"></script>
     <script src="./js/fancybox.js"></script>
