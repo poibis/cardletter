@@ -7,6 +7,9 @@ $(function() {
         location.href="https://www.naver.com";
     }*/
 
+    /* start at top 0 */
+    /*window.scrollTo(0,0);*/
+
     $("body").css("display","none").fadeIn(3500);
 
     const audioSource = "./resource/Liebeheim.mp3";
@@ -76,6 +79,15 @@ $(function() {
     }
     diffDay();
 
+
+    /**
+    * ? easter_egg
+    * */
+    let eggCount = 0;
+    $('.easter_egg').on('click', ()=>{
+        eggCount += 1;
+        console.log(eggCount);
+    })
 });
 
 // windowLoad

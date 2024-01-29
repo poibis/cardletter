@@ -50,7 +50,7 @@
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
     <!--<div class="sakura_cover"></div>-->
     <div class="info_box animate-flicker" style="position: fixed; z-index:2; top:5px; right:50px;">
-        <div class="info_box_pull">배경음악을 키고 끌 수 있어요</div>
+        <div class="info_box_pull"><? echo 'test'; ?>배경음악을 키고 끌 수 있어요</div>
     </div>
     <div style="position: fixed; z-index:2; top:10px; right:25px;">
 
@@ -66,15 +66,15 @@
     <div class="wrap_cover" >
         <div class="start_comment0 bg_txt" style="text-align:center; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">스크롤을 계속 내려보세요 😀</div>
         <div class="start_comment1 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">안녕하세요.</div>
-        <div class="start_comment2 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">믿음과 사랑으로 한 가정을 이루고자 </div>
-        <div class="start_comment3 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">소중한 분들을 모시고 혼인의 서약을 맺으려 합니다.</div>
-        <div class="start_comment4 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">오셔서 따뜻한 마음으로 축하해 주시면</div>
-        <div class="start_comment5 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">더없는 기쁨으로 간직하겠습니다.</div>
-        <div class="start_comment6 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">초대 할 수있어 진심으로 </div>
+        <div class="start_comment2 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">믿음과 사랑으로<br>한 가정을 이루고자 </div>
+        <div class="start_comment3 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">소중한 분들을 모시고<br>혼인의 서약을 맺으려 합니다.</div>
+        <div class="start_comment4 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">오셔서 따뜻한 마음으로 축하해 주시면<br>더없는 기쁨으로 간직하겠습니다.</div>
+        <div class="start_comment5 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">초대 할 수있어 진심으로 </div>
         <div class="start_comment7 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;"><span class="start_comment8" style="opacity: 0;">감사</span>합니다.</div>
         <br><br>
         <div class="scroll-down"><a><span></span></a></div>
     </div>
+    <div id="trigger_2"></div>
     <div style="height:50px;"></div>
     <div id="top_pin" class="box">
         <div style="font-size:20px; text-align: center;"><span style="font-family: Parisienne,serif;">test1</span></div>
@@ -86,19 +86,30 @@
             <!--<img class="cover_img" src="./img/dist/test_bg.jpg" alt="first_img">-->
 <!--        </div>-->
 
-    <div id="trigger_2"></div>
-    <div style="position: relative;">
-        <img id="myimg" src="https://plant-design-src.s3.ap-northeast-2.amazonaws.com/images/pc/snapshot/package/PACKAGE_00000.png" style="position:absolute; top:0; left:0; z-index:2; width: 100%; height: auto;" alt="scroll_img">
+    <div class="">
+        <div style="position: relative;">
+            <img id="myimg" src="https://plant-design-src.s3.ap-northeast-2.amazonaws.com/images/pc/snapshot/package/PACKAGE_00000.png" style="position:absolute; top:0; left:0; z-index:2; width: 100%; height: auto;" alt="scroll_img">
+        </div>
+
+        <div style="height:400px;"></div>
+        <div id="middle_pin" class="box">
+            <div style="font-size:17px; text-align: center;">2024.03.30 토 17:20PM</div>
+            <div style="font-size:17px; text-align: center;">강서 더베뉴지서울 네이쳐홀</div>
+        </div>
     </div>
 
-    <div class="datepicker">
-        <div style="position: relative; top:0; left:0; width:100%; height:100%; background-color:#000; z-index: 4;"></div>
-        <div class="datepicker-header"></div>
+    <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
+        <div class="block_cover" style="position: absolute; top:0; left:0; width:100%; height:600px; z-index: 3;"></div>
+        <div class="datepicker">
+            <div class="datepicker-header"></div>
+        </div>
     </div>
+
+
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
         <!--결혼식까지-->
         <div  style="text-align:center;">
-            <span class="title_txt">&nbsp;&nbsp;&nbsp;- 결혼식까지 -&nbsp;&nbsp;&nbsp;</span>
+            <span class="title_txt">&nbsp;&nbsp;&nbsp;- 결혼식까지 -&nbsp;&nbsp;&nbsp;</span><br><br>
         </div>
         <div class="neon d-day"></div>
         <div><span style="font-family: Parisienne,serif;">Wedding</span></div>
@@ -108,7 +119,7 @@
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
         <!--주차 안내-->
         <div style="text-align:center;">
-            <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 주차 안내 -&nbsp;&nbsp;&nbsp;</span><br>
+            <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 주차 안내 -&nbsp;&nbsp;&nbsp;</span><br><br>
             지하 2층 ~ 지상 5층 까지,<br>약 1,200대 주차 공간이 마련 되어 있습니다.<br>
             2시간 무료 주차 가능합니다.
         </div>
@@ -116,9 +127,14 @@
     </div>
 
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
-        <div style="text-align:center;">오시는 길</div>
-        <div id="navi_map" style="width:100%; height:400px;"><!--오시는 길-->
-
+        <div style="text-align:center;">
+            <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 오시는 길 -&nbsp;&nbsp;&nbsp;</span><br><br>
+        </div>
+        <div class="block_cover" style="position: absolute; top:0; left:0; width:100%; height:400px; z-index: 3;"></div>
+        <div id="navi_map" style="width:100%; height:400px;"></div>
+        <div style="display: flex; justify-content: center;">
+            <button class="button-10" onclick="setDraggable(true)">지도 이동 켜기</button>
+            <button class="button-10" onclick="setDraggable(false)">지도 이동 끄기</button>
         </div>
     </div>
 
@@ -159,15 +175,48 @@
     </div>
 
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
-        <div style="text-align:center;">마음 전할 곳</div>
+        <div style="text-align:center;">
+            <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 마음 전할 곳 -&nbsp;&nbsp;&nbsp;</span><br><br>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button class="button-10" onclick="">신랑(정성욱) 측 🤵🏻</button>
+            <button class="button-10" onclick="">신부(강나윤) 측 👰🏻</button>
+        </div>
         <div>test<a href="https://link.kakaopay.com/_/TdZDkIe"><img alt="카카오페이_송금하기" src="./img/dist/btn_send_small.png" style="width:84px; height:auto;"></a></div>
     </div>
 
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
-        <div class=""><!--footer copy right--> </div>
+        <div style="text-align:center;">
+            <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 축하 메시지 -&nbsp;&nbsp;&nbsp;</span><br><br>
+        </div>
+        <div style="display: flex; justify-content: center; flex-direction: column;">
+            <div>
+                <label>
+                    <textarea> test </textarea>
+                </label>
+            </div>
+            <div>
+                <div>test1</div>
+                <div>test2</div>
+                <div>test3</div>
+                <div>test4</div>
+            </div>
+        </div>
+        <div> 더보기 </div>
     </div>
 
-    <div style="height:5000px;"></div>
+
+    <!--footer copyright-->
+    <div style="text-align: center;">
+        <div class="easter_egg" style="display:flex; align-items: center; justify-content: center;color:#FFFFFF; font-size: 17px; height: 150px; background-image: url('./img/dist/copyright_bg_img.jpg'); background-size: 100%; background-position: 0 150px; line-height: 30px; margin-bottom: 20px;">
+            항상 좋은 일만 가득하길 바랍니다.<br>
+            소중한 시간을 내어 주어 감사합니다.<br>
+        </div>
+        copyright © all rights reserved, 2024<br>
+        <span style="font-family: Parisienne,serif; font-style: italic;">jung sungwook & Kang nayoon</span>
+    </div>
+    <div style="height:20px;"></div>
+
     <script src="./js/sakura.min.js"></script>
     <script src="./js/base.js"></script>
     <script src="./js/scrollAction.js"></script>
