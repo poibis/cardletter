@@ -61,15 +61,16 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
     color: #fff;
     background: linear-gradient(180deg, #ffd4ab 0%, #ffd4ab 100%);
     background-origin: border-box;
-    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0.5px 1.5px rgba(255, 212, 171, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     font-weight: 600;
 }
 
-.button-10:focus {
-    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+.button-10:focus, .toggle_selected {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(111, 111, 111, 0.25), 0px 0px 0px 3.5px rgba(55, 55, 55, 0.5);
+    color:#444444;
     outline: 0;
 }
 
