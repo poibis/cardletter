@@ -32,6 +32,7 @@
     <script src="./js/library/wow.min.js"></script>
     <script src="./js/library/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
     <!-- services 라이브러리 불러오기 -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=77813216af7265fef834a8a69f48ba77&libraries=services,clusterer,drawing"></script>
 
@@ -43,8 +44,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
-    <title>성욱,나윤 결혼합니다💑🎉</title>
-<!--    <title>test</title>-->
+<!--    <title>성욱,나윤 결혼합니다💑🎉</title>-->
+    <title>test</title>
 </head>
 
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -219,12 +220,45 @@
         <div style="text-align:center;">
             <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 마음 전할 곳 -&nbsp;&nbsp;&nbsp;</span><br><br>
         </div>
-        <div style="display: flex; justify-content: center;">
-            <button class="button-10" onclick="">신랑(정성욱) 측 🤵🏻</button>
-            <button class="button-10" onclick="">신부(강나윤) 측 👰🏻</button>
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+            <button id="groom" class="button-10 openModal">신랑(정성욱) 측 🤵🏻</button>
+            <button id="bride" class="button-10 openModal">신부(강나윤) 측 👰🏻</button>
         </div>
-        <div>신랑<a href="https://link.kakaopay.com/_/TdZDkIe"><img alt="카카오페이_송금하기" src="./img/dist/btn_send_small.png" style="width:84px; height:auto;"></a></div><br>
-        <div>신부<a href="https://link.kakaopay.com/_/LcTH9yS"><img alt="카카오페이_송금하기" src="./img/dist/btn_send_small.png" style="width:84px; height:auto;"></a></div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div id="myModal_back" class="modal-back"></div>
+        <div class="modal-content">
+            <div class="content-head">
+                <div><span id="accountInfo">신랑</span>측 계좌번호</div>
+                <div><span id="closeModal" class="close-btn">X</span></div>
+            </div>
+            <div class="content-main">
+                <div class="main-top" id="mem">신랑 정성욱</div>
+                <div class="main-middle">
+                    <div class="accountBox"  id="mem_accountInfo">국민은행 514202-01-546701</div>
+                    <input type="hidden" id="accountInfoNum" value="">
+                    <div class="accountCopy" id="mem_accountCopy"><button class="button-10 btn" data-clipboard-target="#accountInfoNum">복사</button></div>
+                </div>
+                <div class="main-middle">
+                    <div class="accountBox">카카오페이 바로 송금&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="accountCopy"><a id="kakaoPayLink" href="https://link.kakaopay.com/_/TdZDkIe"><img alt="카카오페이_송금하기" src="./img/dist/btn_send_small.png" style="width:112px; height:auto;"></a></div>
+                </div>
+                <div class="main-top" id="memD">아버지 정지홍</div>
+                <div class="main-middle">
+                    <div class="accountBox"  id="memD_accountInfo">우리은행 12345-12334-2343</div>
+                    <input type="hidden" id="memD_accountInfoNum" value="">
+
+                    <div class="accountCopy" id="memD_accountCopy"><button class="button-10 btn" data-clipboard-target="#memD_accountInfoNum">복사</button></div>
+                </div>
+                <div class="main-top" id="memM">어머니 김진순</div>
+                <div class="main-middle">
+                    <div class="accountBox"  id="memM_accountInfo">신한은행 5876-56-76978&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <input type="hidden" id="memM_accountInfoNum" value="">
+                    <div class="accountCopy" id="memM_accountCopy"><button class="button-10 btn" data-clipboard-target="#memM_accountInfoNum">복사</button></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
