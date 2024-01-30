@@ -45,47 +45,69 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
     <title>성욱,나윤 결혼합니다💑🎉</title>
-<!--    <title>test</title>-->
 </head>
+<?
+$parentJ = $_GET['parentJ'];
+$parentK = $_GET['parentK'];
+$mode = $_GET['mode'];
+?>
 
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
-    <!--<div class="sakura_cover"></div>-->
-    <div class="info_box animate-flicker" style="position: fixed; z-index:2; top:5px; right:50px;">
-        <div class="info_box_pull"><? echo 'test'; ?>배경음악을 키고 끌 수 있어요</div>
+<div class="standBy">
+    <div class="info_box animate-flicker">
+        <div class="info_box_pull">배경음악을 키고 끌 수 있어요</div>
     </div>
-    <div style="position: fixed; z-index:5; top:10px; right:25px;">
-
-        <img class="vol_control " src="./img/dist/mute.png" data-icon="OFF" style="width:20px; height:20px;" alt="volume">
-
+    <div class="vol_div">
+        <img class="vol_control " src="./img/dist/mute.png" data-icon="OFF" alt="volume">
     </div>
 
+    <?if($mode !== "on") {?>
     <div id="trigger_1"></div>
 
     <div class="pin_div">
         <div class="cover_div"></div>
     </div>
     <div class="wrap_cover" >
-        <div class="start_comment0 bg_txt" style="text-align:center; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">스크롤을 계속 내려보세요 😀</div>
-        <div class="start_comment1 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">안녕하세요.</div>
-        <div class="start_comment2 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">믿음과 사랑으로<br>한 가정을 이루고자 </div>
-        <div class="start_comment3 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">소중한 분들을 모시고<br>혼인의 서약을 맺으려 합니다.</div>
-        <div class="start_comment4 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">오셔서 따뜻한 마음으로 축하해 주시면<br>더없는 기쁨으로 간직하겠습니다.</div>
-        <div class="start_comment5 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;">초대 할 수있어 진심으로 </div>
-        <div class="start_comment7 bg_txt" style="text-align:center; opacity: 0; color:#FFFFFF; position:fixed; z-index:2; top:50%; width: 100%; font-size:19px;"><span class="start_comment8" style="opacity: 0;">감사</span>합니다.</div>
+        <div class="start_comment0 bg_txt" >스크롤을 계속 내려보세요 😀</div>
+        <div class="start_comment1 bg_txt" style="opacity: 0;">안녕하세요.</div>
+        <div class="start_comment2 bg_txt" style="opacity: 0;">믿음과 사랑으로<br>한 가정을 이루고자 </div>
+        <div class="start_comment3 bg_txt" style="opacity: 0;">소중한 분들을 모시고<br>혼인의 서약을 맺으려 합니다.</div>
+        <div class="start_comment4 bg_txt" style="opacity: 0;">오셔서 따뜻한 마음으로 축하해 주시면<br>더없는 기쁨으로 간직하겠습니다.</div>
+        <div class="start_comment5 bg_txt" style="opacity: 0;">초대 할 수있어 진심으로 </div>
+        <div class="start_comment7 bg_txt" style="opacity: 0;">감사합니다.</div>
         <br><br>
         <div class="scroll-down"><a><span></span></a></div>
     </div>
+    <?}else{?>
+    <div id="trigger_1-1"></div>
+    <div class="scroll-down" style="z-index: 2;"><a><span></span></a></div>
+    <div class="pin_div_1">
+        <div class="cover_div_1" style="filter: brightness(1);"></div>
+    </div>
+    <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s" style="line-height:33px;">
+        <span class="inline-txt17">함께하는 6번째 봄.<br>
+        믿음과 사랑으로<br>한 가정을 이루고자<br>
+        소중한분들을 모시고<br>혼인의 서약을 맺으려 합니다.<br>
+        따뜻한 마음으로 축하해 주시면<br>더 없는 기쁨으로 간직하겠습니다.<br>
+        초대 할 수있어 진심으로 감사합니다.</span>
+        <br><br>
+        <div style="margin-bottom:20px;">
+            정지홍 · 김진순<span style="font-size:12px;">의 장남</span> 성욱<br>
+            강동광 · 김미란<span style="font-size:12px;">의 장녀</span> 나윤
+        </div>
+    </div>
+    <?}?>
     <div id="trigger_2"></div>
     <div style="height:50px;"></div>
     <div id="top_pin" class="box">
         <div style="font-size:20px; text-align: center;"><span style="font-family: Parisienne,serif;">wedding ceremony</span></div>
         <div style="font-size:20px; text-align: center;">정성욱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: Parisienne,serif;">and</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강나윤</div>
     </div>
-    <div id="pin_top" style="height:58px; display:none;"></div>
+    <div id="pin_top"></div>
 
     <div style="height:650px;">
         <div style="position: relative;">
-            <img id="myimg" src="./img/sequence/1.jpg" style="position:absolute; top:0; left:0; z-index:2; width: 100%; height: auto;" alt="scroll_img">
+            <img id="myimg" src="./img/sequence/1.jpg" alt="scroll_img">
         </div>
 
         <div style="height:600px;"></div>
@@ -166,18 +188,12 @@
         </div>
         <div style="height:25px;"></div>
         <div style="display: flex; align-items: center; justify-content: center; font-size:13px;">
-            <div style="margin:0 12px 0 12px;"><a href="https://surl.tmobiapi.com/1380fa8f" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="https://play-lh.googleusercontent.com/WcrqQ9atNdC7dp4vG4fWue0kRdMxiDSTKu9E1Zj7EmGcgdQ8j3u9_2Tt8vw-zPvKCkg=w240-h480-rw"></a><br>티맵</div>
-            <div style="margin:0 12px 0 12px;"><a href="https://place.map.kakao.com/m/8700757" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="https://play-lh.googleusercontent.com/tmKbM_kM31bRZoU1SkKw2LB30CFdm-MZYP0XBxlJzhYuJfbulrMi_P88VOxuZszXhPk=w240-h480-rw"></a><br>카카오네비</div>
-            <div style="margin:0 12px 0 12px;"><a href="https://naver.me/xpaA3PA3" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="https://play-lh.googleusercontent.com/BaWUhtRONqb2Tt0ESjnaEH9KiaAUnOlFJqGzGUYN6oPsEEpZhPwQeHZhuGcM1Y8g1Io=w240-h480-rw"></a><br>네이버지도</div>
-            <div style="margin:0 12px 0 12px;"><a href="https://kko.to/3Cer6cVET_" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="https://play-lh.googleusercontent.com/pPTTNz433EYFurg2j__bFU5ONdMoU_bs_-yS2JLZriua3iHrksGP6XBPF5VtDPlpGcW4=w240-h480-rw"></a><br>카카오맵</div>
+            <div style="margin:0 12px 0 12px;"><a href="https://surl.tmobiapi.com/1380fa8f" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="./img/dist/tmap.jpg"></a><br>티맵</div>
+            <div style="margin:0 12px 0 12px;"><a href="https://place.map.kakao.com/m/8700757" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="./img/dist/kakaonavi.jpg"></a><br>카카오네비</div>
+            <div style="margin:0 12px 0 12px;"><a href="https://naver.me/xpaA3PA3" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="./img/dist/navermap.jpg"></a><br>네이버지도</div>
+            <div style="margin:0 12px 0 12px;"><a href="https://kko.to/3Cer6cVET_" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="./img/dist/kakaomap.jpg"></a><br>카카오맵</div>
         </div>
-        <div style="height:25px;"></div>
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div style="height:25px;"></div>
+        <div style="height:40px;"></div>
     </div>
 
     <!--갤러리-->
@@ -222,7 +238,9 @@
         </div>
         <div style="display: flex; justify-content: center; margin-bottom: 30px;">
             <button id="groom" class="button-10 openModal">신랑(정성욱) 측 🤵🏻</button>
+            <?if($parentJ !== "on"){?>
             <button id="bride" class="button-10 openModal">신부(강나윤) 측 👰🏻</button>
+            <?}?>
         </div>
     </div>
 
@@ -298,6 +316,7 @@
     <script src="./js/scrollAction.js"></script>
     <script src="./js/fancybox.js"></script>
     <script src="./js/kakaoMaps.js"></script>
-
+</div>
+<div class="preLoad blink">로딩 중 입니다.<br>잠시만 기다려 주세요.</div>
 </body>
 </html>
