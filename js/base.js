@@ -115,6 +115,112 @@ $(function() {
         $("#"+mapSelected).addClass('toggle_selected');
     })
 
+    /* modal */
+    const clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function(e) {
+        alert("계좌번호를 복사 하였습니다.");
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });
+
+    $(".openModal").on('click', (e)=>{
+        settingAccountInfo(e.target.id+"Ary");
+        $("#myModal").css('display','flex');
+        $("#myModal_back").css('display','flex');
+    })
+    // 종료시 => 초기화 해야함
+    $(".modal-back").on('click', (e)=> {
+        clearAccountInfo();
+        $("#myModal").css('display','none');
+        $("#myModal_back").css('display','none');
+    })
+    $("#closeModal").on('click', ()=>{
+        clearAccountInfo();
+        $("#myModal").css('display','none');
+        $("#myModal_back").css('display','none');
+    })
+    // 종료시
+
+    const groomAry = {
+        "info"              : "신랑",
+        "name"              : "정성욱",
+        "accountInfoNum"    : "514202-01-546701",
+        "kakaoPayLink"      : "https://link.kakaopay.com/_/TdZDkIe",
+        "mem_accountInfo"   : "국민은행 514202-01-546701",
+        "memD"              : "아버지 정지홍",
+        "memD_accountInfo"  : "우리은행 12345-12334-2343",
+        "memD_accountInfoNum": "12345-12334-2343",
+        "memM"              : "어머니 김진순",
+        "memM_accountInfo"  : "신한은행 5876-56-76978&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
+        "memM_accountInfoNum": "5876-56-76978",
+    }
+
+    const brideAry = {
+        "info"              : "신부",
+        "name"              : "강나윤",
+        "accountInfoNum"    : "666666-33-787878",
+        "kakaoPayLink"      : "https://link.kakaopay.com/_/LcTH9yS",
+        "mem_accountInfo"   : "하나은행 514202-01-546701",
+        "memD"              : "아버지 강동광",
+        "memD_accountInfo"  : "우리은행 65498-78451-5252",
+        "memD_accountInfoNum": "666666-33-787878",
+        "memM"              : "어머니 김미란",
+        "memM_accountInfo"  : "신한은행 7898-98-12345&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
+        "memM_accountInfoNum": "7898-98-12345",
+    }
+    function clearAccountInfo() {
+        $("#accountInfo").html("");
+        $("#mem").html("");
+        $("#mem_accountInfo").html("");
+        $("#accountInfoNum").val("");
+        $("#kakaoPayLink").prop("href","#");
+        $("#memD").html("");
+        $("#memM").html("");
+        $("#memD_accountInfo").html("");
+        $("#memD_accountInfoNum").val("");
+        $("#memM_accountInfo").html("");
+        $("#memM_accountInfoNum").val("");
+    }
+    function settingAccountInfo(str) {
+
+        if(str === "groomAry") {
+            $("#accountInfo").html(groomAry.info);
+            $("#mem").html(groomAry.info+' '+groomAry.name);
+            $("#mem_accountInfo").html(groomAry.mem_accountInfo);
+            $("#accountInfoNum").val(groomAry.accountInfoNum);
+            $("#kakaoPayLink").prop("href",groomAry.kakaoPayLink);
+            $("#memD").html(groomAry.memD);
+            $("#memM").html(groomAry.memM);
+            $("#memD_accountInfo").html(groomAry.memD_accountInfo);
+            $("#memD_accountInfoNum").val(groomAry.memD_accountInfoNum);
+            $("#memM_accountInfo").html(groomAry.memM_accountInfo);
+            $("#memM_accountInfoNum").val(groomAry.memM_accountInfoNum);
+        } else {
+            $("#accountInfo").html(brideAry.info);
+            $("#mem").html(brideAry.info+' '+brideAry.name);
+            $("#mem_accountInfo").html(brideAry.mem_accountInfo);
+            $("#accountInfoNum").val(brideAry.accountInfoNum);
+            $("#kakaoPayLink").prop("href",brideAry.kakaoPayLink);
+            $("#memD").html(brideAry.memD);
+            $("#memM").html(brideAry.memM);
+            $("#memD_accountInfo").html(brideAry.memD_accountInfo);
+            $("#memD_accountInfoNum").val(brideAry.memD_accountInfoNum);
+            $("#memM_accountInfo").html(brideAry.memM_accountInfo);
+            $("#memM_accountInfoNum").val(brideAry.memM_accountInfoNum);
+        }
+    }
+
+    /* modal */
+
     /**
     * ? easter_egg
     * */
@@ -166,5 +272,5 @@ console.log(`
 %c █████  ███████  ███ ███      ███ ███   ██████  ██   ██ ███████ ██████  
                                                                                                                                             
 
-`, "color:#22577A", "color:#38A3A5", "color:#57CC99", "color:#80ED99", "color:#99FFED",);
+`, "color:#22577A", "color:#38A3A5", "color:#57CC99", "color:#80ED99", "color:#99FFED");
 

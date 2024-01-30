@@ -28,14 +28,14 @@ const controller = new ScrollMagic.Controller();
 
 new ScrollMagic.Scene({
     triggerElement: "#trigger_1",
-    duration: 4000,
+    duration: 3000,
     triggerHook: "0",
 })
 
     .setPin(".pin_div", {pushFollowers:true})
     .setTween(tween)
     .addTo(controller)
-    //.addIndicators({name: "set_bg_trigger_1(duration:4000)"})
+    //.addIndicators({name: "set_bg_trigger_1(duration:3000)"})
 
 const topPin    = $('#top_pin').offset().top;
 const middlePin    = $('#middle_pin').offset().top;
