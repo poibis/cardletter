@@ -10,9 +10,8 @@ $(function() {
     /* start at top 0 */
     window.scrollTo(0,0);
 
-    $("body").css("display","none").fadeIn(3500);
-
-    const audioSource = "./resource/Liebeheim.mp3";
+    // const audioSource = "./resource/Liebeheim.mp3";
+    const audioSource = "./resource/BeautyAndTheBeast.mp3";
     const bg_audio = new Audio();
     bg_audio.src            = audioSource;
     bg_audio.loop           = true;
@@ -54,9 +53,12 @@ $(function() {
 
     async function preloadImages() {
         const startTime = new Date().getTime();
+        $(".standBy").css("display","none");
         await
             Promise.all(imgSrcs.map(preloadImage));
         const endTime = new Date().getTime();
+        $(".standBy").fadeIn(2500);
+        $(".preLoad").css("display","none");
         console.log(endTime - startTime);
     }
 
@@ -152,28 +154,28 @@ $(function() {
 
     const groomAry = {
         "info"              : "신랑",
-        "name"              : "정성욱",
+        "name"              : "정성욱 🤵🏻",
         "accountInfoNum"    : "514202-01-546701",
         "kakaoPayLink"      : "https://link.kakaopay.com/_/TdZDkIe",
         "mem_accountInfo"   : "국민은행 514202-01-546701",
-        "memD"              : "아버지 정지홍",
+        "memD"              : "아버지 정지홍 👨",
         "memD_accountInfo"  : "우리은행 12345-12334-2343",
         "memD_accountInfoNum": "12345-12334-2343",
-        "memM"              : "어머니 김진순",
+        "memM"              : "어머니 김진순 👩",
         "memM_accountInfo"  : "신한은행 5876-56-76978&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
         "memM_accountInfoNum": "5876-56-76978",
     }
 
     const brideAry = {
         "info"              : "신부",
-        "name"              : "강나윤",
+        "name"              : "강나윤 👰🏻",
         "accountInfoNum"    : "666666-33-787878",
         "kakaoPayLink"      : "https://link.kakaopay.com/_/LcTH9yS",
         "mem_accountInfo"   : "하나은행 514202-01-546701",
-        "memD"              : "아버지 강동광",
+        "memD"              : "아버지 강동광 👨",
         "memD_accountInfo"  : "우리은행 65498-78451-5252",
         "memD_accountInfoNum": "666666-33-787878",
-        "memM"              : "어머니 김미란",
+        "memM"              : "어머니 김미란 👩",
         "memM_accountInfo"  : "신한은행 7898-98-12345&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
         "memM_accountInfoNum": "7898-98-12345",
     }

@@ -17,7 +17,7 @@ tween.to(".start_comment5", {opacity: 0, duration:600, delay: 1000} );
 /*tween.to(".start_comment6", {y:-10, opacity: 1, duration:600});
 tween.to(".start_comment6", {opacity: 0, duration:600, delay: 1000} );*/
 tween.to(".start_comment7", {y:-10, opacity: 1, duration:3000});
-tween.to(".start_comment8", {opacity: 1, duration:3000, delay: 3000});
+/*tween.to(".start_comment8", {opacity: 1, duration:3000, delay: 3000});*/
 tween.to(".start_comment7", {opacity: 0, duration:3000, delay: 3000} );
 tween.to(".info_box", {visibility: "hidden", duration:1, delay: 1} );
 /*tween.to(".cover_img", {filter: "brightness(100%)", duration:3000});*/
@@ -28,14 +28,28 @@ const controller = new ScrollMagic.Controller();
 
 new ScrollMagic.Scene({
     triggerElement: "#trigger_1",
-    duration: 3000,
+    duration: 2000,
     triggerHook: "0",
 })
 
     .setPin(".pin_div", {pushFollowers:true})
     .setTween(tween)
     .addTo(controller)
-    //.addIndicators({name: "set_bg_trigger_1(duration:3000)"})
+    //.addIndicators({name: "set_bg_trigger_1(duration:2000)"})
+
+// mode version
+let tween_mode = gsap.timeline();
+tween_mode.to(".cover_div_1", {width: '90%', filter: "brightness(100%)", duration:500});
+
+new ScrollMagic.Scene({
+    triggerElement: "#trigger_1-1",
+    duration: 1000,
+    triggerHook: "0",
+})
+    .setPin(".pin_div_1", {pushFollowers:true})
+    .setTween(tween_mode)
+    .addTo(controller)
+// mode version
 
 const topPin    = $('#top_pin').offset().top;
 const middlePin    = $('#middle_pin').offset().top;
@@ -82,20 +96,19 @@ $(window).scroll(function(){
     if(scrollPosition > topPin) {
         gsap.to("#top_pin", { position: 'fixed', top: 0, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 0.1, zIndex: 3 });
         $("#pin_top").css('display','block');
+        $('.scroll-down').css('display','none');
     } else {
         gsap.to("#top_pin", { position: '', width: "90%", padding:"5px 8px 5px 8px", borderRadius: "1px solid #FFFFFF", boxShadow:"0 0 10px 10px #FFFFFF", duration: 0.1, zIndex: 3 });
         $("#pin_top").css('display','none');
+        $('.scroll-down').css('display','block');
     }
 
     if(scrollPosition + 60 > middlePin) {
         gsap.to("#middle_pin", { position: 'fixed', top: 61, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 0.1, zIndex: 4 });
         $("#pin_middle").css('display','block');
-
-        $('.scroll-down').css('display','none');
     } else {
         gsap.to("#middle_pin", { position: '', width: "90%", padding:"5px 8px 5px 8px", borderRadius: "1px solid #FFFFFF", boxShadow:"0 0 10px 10px #FFFFFF", duration: 0.1, zIndex: 4 });
         $("#pin_middle").css('display','none');
-        $('.scroll-down').css('display','block');
     }
 })
 
