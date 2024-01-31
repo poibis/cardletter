@@ -87,7 +87,7 @@ $(window).scroll(function(){
     let scrollPosition = $(this).scrollTop();
     /*$('#scrolltop').html(scrollPosition);
     $('#middletop').html(middlePin);*/
-    if(scrollPosition > topPin + 70) {
+    if(scrollPosition > topPin + 50) {
         gsap.to("#top_pin", { position: 'fixed', top: 0, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 0.1, zIndex: 3 });
         $("#pin_top").css('display','block');
         $('.scroll-down').css('display','none');
@@ -97,7 +97,7 @@ $(window).scroll(function(){
         $('.scroll-down').css('display','block');
     }
 
-    if(scrollPosition -70 > middlePin) {
+    if(scrollPosition -30 > middlePin) {
         gsap.to("#middle_pin", { position: 'fixed', top: 61, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 0.1, zIndex: 4 });
         $("#pin_middle").css('display','block');
     } else {
