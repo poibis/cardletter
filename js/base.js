@@ -13,9 +13,9 @@ $(function() {
     // const audioSource = "./resource/Liebeheim.mp3";
     const audioSource = "./resource/BeautyAndTheBeast.mp3";
     const bg_audio = new Audio();
+    bg_audio.autoplay       = true;
     bg_audio.src            = audioSource;
     bg_audio.loop           = true;
-    bg_audio.autoplay       = true;
     bg_audio.play();
     /*$('.sakura_cover').sakura();*/
 
@@ -28,7 +28,11 @@ $(function() {
         } else {
             volume.dataset.icon = "ON";
             $(this).attr('src',"./img/dist/volume.png");
-            bg_audio.play();
+            bg_audio.play().then(r => {
+                console.log(r);
+            }).catch((e)=>{
+                console.log(e);
+            });
         }
 
     })
