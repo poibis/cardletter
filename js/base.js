@@ -289,8 +289,8 @@ new WOW(
 function startNavigation() {
     Kakao.Navi.start({
         name: '더베뉴지서울',
-        x: 37.56020032129378,
-        y: 126.83930631305121,
+        x: 126.83930631305121,
+        y: 37.56020032129378,
         coordType: 'wgs84',
     });
 }
