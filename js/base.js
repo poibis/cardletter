@@ -15,6 +15,8 @@ $(function() {
     const bg_audio = new Audio();
     bg_audio.src            = audioSource;
     bg_audio.loop           = true;
+    bg_audio.autoplay       = true;
+    bg_audio.play();
     /*$('.sakura_cover').sakura();*/
 
     $('.vol_control').click(function(){
@@ -175,7 +177,7 @@ $(function() {
         "memD"              : "부 강동광 👨",
         "memD_accountInfo"  : "우리은행 65498-78451-5252",
         "memD_accountInfoNum": "666666-33-787878",
-        "memM"              : "모 김미란 👩",
+        "memM"              : "모 김미란 👩(예금주: 강대윤)",
         "memM_accountInfo"  : "신한은행 7898-98-12345&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
         "memM_accountInfoNum": "7898-98-12345",
     }
