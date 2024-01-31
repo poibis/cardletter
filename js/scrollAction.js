@@ -85,7 +85,8 @@ new ScrollMagic.Scene({
 
 $(window).scroll(function(){
     let scrollPosition = $(this).scrollTop();
-
+    $('#scrolltop').html(scrollPosition);
+    $('#middletop').html(middlePin);
     if(scrollPosition > topPin) {
         gsap.to("#top_pin", { position: 'fixed', top: 0, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 0.1, zIndex: 3 });
         $("#pin_top").css('display','block');
