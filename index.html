@@ -35,6 +35,11 @@
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
     <!-- services 라이브러리 불러오기 -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=77813216af7265fef834a8a69f48ba77&libraries=services,clusterer,drawing"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.6.0/kakao.min.js"
+            integrity="sha384-6MFdIr0zOira1CHQkedUqJVql0YtcZA1P0nbPrQYJXVJZUkTk/oX4U9GhUIs3/z8" crossorigin="anonymous"></script>
+    <script>
+        Kakao.init('77813216af7265fef834a8a69f48ba77'); // 사용하려는 앱의 JavaScript 키 입력
+    </script>
 
     <link rel="stylesheet" href="./css/style.min.css" media="screen and (max-width: 1080px)">
     <!--<link type="text/css" rel="stylesheet" href="./css/sakura.min.css"  media="screen and (max-width: 1080px)">-->
@@ -99,8 +104,8 @@ $mode = $_GET['mode'] ?? "";
     <div id="trigger_2"></div>
     <div class="hgt-50"></div>
     <div id="top_pin" class="box">
-        <div class="ft-20 txt-center"><span class="paris">wedding ceremony</span></div>
-        <div class="ft-20 txt-center">정성욱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="paris">and</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강나윤</div>
+        <div class="ft-20 txt-center"><div id="middletop"></div><span class="paris">wedding ceremony</span></div>
+        <div class="ft-20 txt-center"><div id="scrolltop"></div>정성욱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="paris">and</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강나윤</div>
     </div>
     <div id="pin_top"></div>
 
@@ -113,7 +118,7 @@ $mode = $_GET['mode'] ?? "";
         <div id="pin_middle" class="hgt-54" style="display:none;"></div>
         <div id="middle_pin" class="box">
             <div class="ft-17 txt-center">2024.03.30 토 17:20PM</div>
-            <div class="ft-17 txt-center">강서 더베뉴지서울 네이처홀</div>
+            <div class="ft-17 txt-center">더베뉴지서울 네이처홀</div>
         </div>
     </div>
 
@@ -188,7 +193,7 @@ $mode = $_GET['mode'] ?? "";
         <div class="hgt-25"></div>
         <div class="map_navi">
             <div class="map_navi-menu"><a href="https://surl.tmobiapi.com/1380fa8f" target="_blank"><img src="./img/dist/tmap.jpg" alt="티맵"></a><br>티맵</div>
-            <div class="map_navi-menu"><a href="https://place.map.kakao.com/m/8700757" target="_blank"><img src="./img/dist/kakaonavi.jpg" alt="카카오네비"></a><br>카카오네비</div>
+            <div class="map_navi-menu"><a href="javascript:startNavigation()" target="_blank"><img src="./img/dist/kakaonavi.jpg" alt="카카오네비"></a><br>카카오네비</div>
             <div class="map_navi-menu"><a href="https://naver.me/xpaA3PA3" target="_blank"><img src="./img/dist/navermap.jpg" alt="네이버지도"></a><br>네이버지도</div>
             <div class="map_navi-menu"><a href="https://kko.to/3Cer6cVET_" target="_blank"><img src="./img/dist/kakaomap.jpg" alt="카카오맵"></a><br>카카오맵</div>
         </div>
@@ -291,8 +296,8 @@ $mode = $_GET['mode'] ?? "";
     </div>
     <div class="hgt-20"></div>
 
-    <script src="./js/base.min.js"></script>
-    <script src="./js/scrollAction.min.js"></script>
+    <script src="./js/base.js"></script>
+    <script src="./js/scrollAction.js"></script>
     <script src="./js/fancybox.min.js"></script>
     <script src="./js/kakaoMaps.min.js"></script>
 </div>
