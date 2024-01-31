@@ -8,7 +8,7 @@ $(function() {
     }
 
     /* start at top 0 */
-    window.scrollTo(0,0);
+    // window.scrollTo(0,0);
 
     // const audioSource = "./resource/Liebeheim.mp3";
     const audioSource = "./resource/BeautyAndTheBeast.mp3";
