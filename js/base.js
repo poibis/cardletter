@@ -231,10 +231,31 @@ $(function() {
         eggCount += 1;
         console.log(eggCount);
     })
+
+    // wow js
+    new WOW(
+        {
+            boxClass:     'wow',      // default
+            animateClass: 'animate__animated', // default
+            offset: 300,
+            mobile: true,
+            live: true
+        }
+    ).init();
 });
 
 // windowLoad
 $(window).on('load',function() {
+    // wow js
+    new WOW(
+        {
+            boxClass:     'wow',      // default
+            animateClass: 'animate__animated', // default
+            offset: 300,
+            mobile: true,
+            live: true
+        }
+    ).init();
 });
 
 //  keydown block
@@ -252,7 +273,7 @@ $(document).on('change', '.ui-datepicker-year', function(e) {
 new WOW(
     {
         boxClass:     'wow',      // default
-        animateClass: 'animated', // default
+        animateClass: 'animate__animated', // default
         offset: 300,
         mobile: true,
         live: true
