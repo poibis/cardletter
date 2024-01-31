@@ -1,7 +1,13 @@
-@font-face {
+/*@font-face {
     font-family: 'Pretendard-Regular';
     src: url('./font/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
+    font-style: normal;
+}*/
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
@@ -12,7 +18,7 @@
 }
 
 html {
-    font-family: 'Pretendard-Regular', serif;
+    font-family: 'omyu_pretty', serif;
     scroll-behavior: smooth;
     margin : 0 auto;
 }
@@ -57,7 +63,6 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
 .cover_div, .cover_div_1 {
     margin: auto;
     padding: 0;
-    /*background-image: url("../img/dist/test_bg.jpg");*/
     background-image: url("../img/dist/bg_img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -77,6 +82,57 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
 .vol_control { width:20px; height:20px; }
 
 .inline-txt17 {font-size:17px;}
+.mgb-20 {margin-bottom:20px;}
+.ft-12 {font-size:12px;}
+.ft-17 {font-size:17px;}
+.ft-20 {font-size:20px;}
+.hgt-700 {height:700px; }
+.hgt-750 {height:750px; }
+.hgt-20 {height:20px; }
+.hgt-25 {height:25px; }
+.hgt-40 {height: 40px;}
+.hgt-50 {height: 50px;}
+.hgt-54 {height: 54px;}
+
+.po-rel {position: relative;}
+.txt-center {text-align: center;}
+.txt-left {text-align: left;}
+.opt0 { opacity: 0;}
+.italic { font-style: italic;}
+.paris { font-family: Parisienne, serif}
+.z-index2 {z-index: 2}
+.filter1 { filter: brightness(1)}
+.line-hgt33 {line-height: 33px}
+
+.block_cover {position: absolute; top:0; left:0; width:100%; height:600px; z-index: 3;}
+.trans_padding { padding:0px 15px 5px 15px; }
+.trans_head {border-top: 1px solid #dddddd; margin-top: 20px;}
+.trans_marker {font-weight:600; font-size:17px; margin:10px 0 10px 0;}
+.trans_line5 {color:#996CAC}
+.trans_border {margin:3px 4px 0;}
+.trans_airport {color:#964b00}
+.trans_village {color:#53b332}
+.trans_normal {color:#33CC99}
+.trans_blue {color:#0068b7}
+.trans_green {color:#53b332}
+.trans_direct{color:#e60012}
+
+.direction_body {display: flex; justify-content: center; width: 20%;}
+.direction_body-img {width:25px; height:25px; vertical-align: middle;}
+.direction_body-tel {border-radius: 30px; background-color: #ffeedd; width: 85%; height: 50px; display: flex; justify-content: center; align-items: center;}
+.direction_head {font-size:14px; width: 80%; margin-bottom:20px;}
+.direction_div {display: flex; justify-content:center; text-align: left; padding: 0 15px 0 15px; align-items: center;}
+.direction_info {font-weight: 500; font-size:17px; color:#111111;}
+
+#navi_map {width:100%; height:400px;}
+.map_div {display: flex; justify-content: center;}
+.map_navi {display: flex; align-items: center; justify-content: center; font-size:13px;}
+.map_navi-menu {margin:0 12px 0 12px;}
+.map_navi-menu img {width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px;}
+.easter_egg {display:flex; align-items: center; justify-content: center;color:#FFFFFF; font-size: 17px; height: 150px; background-image: url('../img/dist/copyright_bg_img.jpg'); background-size: 100%; background-position: 0 150px; line-height: 30px; margin-bottom: 20px;}
+.heart {display: flex; justify-content: center; margin-bottom: 30px;}
+.pay_img {width:112px; height:auto;}
+
 .button-10 {
     padding: 6px 14px;
     border-radius: 15px;
@@ -89,7 +145,9 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    font-weight: 600;
+    font-family: 'omyu_pretty', serif;
+    font-size:17px;
+    font-weight: 500;
 }
 
 .button-10:focus, .toggle_selected {
@@ -198,7 +256,6 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
     width: 100%;
     background: #fdfdfd;
     border-radius: 10px;
-    /*box-shadow: 0 19px 38px rgba(0,0,0,0.2), 0 15px 12px rgba(0,0,0,0.2);*/
     margin: 15px auto;
     overflow: hidden;
 }
@@ -417,7 +474,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
 
 .main-middle {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -425,11 +482,7 @@ body { width: 100%; height: auto; margin : 0 auto; background-color:#fffaf5; col
 
 .accountBox {
     padding: 17px 15px 17px 0;
-    /*border: 1px solid #DDDDDD;*/
 }
-
-
-
 .close-btn {
     text-align: right;
     padding: 5px 8px;

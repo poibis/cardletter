@@ -36,7 +36,7 @@
     <!-- services 라이브러리 불러오기 -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=77813216af7265fef834a8a69f48ba77&libraries=services,clusterer,drawing"></script>
 
-    <link rel="stylesheet" href="./css/style.css" media="screen and (max-width: 1080px)">
+    <link rel="stylesheet" href="./css/style.min.css" media="screen and (max-width: 1080px)">
     <!--<link type="text/css" rel="stylesheet" href="./css/sakura.min.css"  media="screen and (max-width: 1080px)">-->
     <link type="text/css" rel="stylesheet" href="./css/animate.min.css" media="screen and (max-width: 1080px)">
     <link type="text/css" rel="stylesheet" href="./css/fancybox.css"    media="screen and (max-width: 1080px)">
@@ -47,9 +47,9 @@
     <title>성욱,나윤 결혼합니다💑🎉</title>
 </head>
 <?
-$parentJ = $_GET['parentJ'];
-$parentK = $_GET['parentK'];
-$mode = $_GET['mode'];
+$parentJ = $_GET['parentJ'] ?? "";
+$parentK = $_GET['parentK'] ?? "";
+$mode = $_GET['mode'] ?? "";
 ?>
 
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -61,7 +61,7 @@ $mode = $_GET['mode'];
         <img class="vol_control " src="./img/dist/mute.png" data-icon="OFF" alt="volume">
     </div>
 
-    <?if($mode !== "on") {?>
+    <? if($mode != "on") {?>
     <div id="trigger_1"></div>
 
     <div class="pin_div">
@@ -69,90 +69,88 @@ $mode = $_GET['mode'];
     </div>
     <div class="wrap_cover" >
         <div class="start_comment0 bg_txt" >스크롤을 계속 내려보세요 😀</div>
-        <div class="start_comment1 bg_txt" style="opacity: 0;">안녕하세요.</div>
-        <div class="start_comment2 bg_txt" style="opacity: 0;">믿음과 사랑으로<br>한 가정을 이루고자 </div>
-        <div class="start_comment3 bg_txt" style="opacity: 0;">소중한 분들을 모시고<br>혼인의 서약을 맺으려 합니다.</div>
-        <div class="start_comment4 bg_txt" style="opacity: 0;">오셔서 따뜻한 마음으로 축하해 주시면<br>더없는 기쁨으로 간직하겠습니다.</div>
-        <div class="start_comment5 bg_txt" style="opacity: 0;">초대 할 수있어 진심으로 </div>
-        <div class="start_comment7 bg_txt" style="opacity: 0;">감사합니다.</div>
+        <div class="start_comment1 bg_txt opt0">안녕하세요.</div>
+        <div class="start_comment2 bg_txt opt0">함께하는 6번째 봄. </div>
+        <div class="start_comment3 bg_txt opt0">믿음과 사랑으로<br>한 가정을 이루고자 </div>
+        <div class="start_comment4 bg_txt opt0">소중한 분들을 모시고<br>혼인의 서약을 맺으려 합니다.</div>
+        <div class="start_comment5 bg_txt opt0">오셔서 따뜻한 마음으로 축하해 주시면<br>더없는 기쁨으로 간직하겠습니다.</div>
         <br><br>
         <div class="scroll-down"><a><span></span></a></div>
     </div>
     <?}else{?>
     <div id="trigger_1-1"></div>
-    <div class="scroll-down" style="z-index: 2;"><a><span></span></a></div>
+    <div class="scroll-down z-index2"><a><span></span></a></div>
     <div class="pin_div_1">
-        <div class="cover_div_1" style="filter: brightness(1);"></div>
+        <div class="cover_div_1 filter1"></div>
     </div>
-    <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s" style="line-height:33px;">
-        <span class="inline-txt17">함께하는 6번째 봄.<br>
+    <div class="cover wow animate__fadeInUp line-hgt33" data-wow-duration="1.5s">
+        <span class="inline-txt17">❤️<br>함께하는 6번째 봄.<br>
         믿음과 사랑으로<br>한 가정을 이루고자<br>
         소중한분들을 모시고<br>혼인의 서약을 맺으려 합니다.<br>
-        따뜻한 마음으로 축하해 주시면<br>더 없는 기쁨으로 간직하겠습니다.<br>
-        초대 할 수있어 진심으로 감사합니다.</span>
-        <br><br>
-        <div style="margin-bottom:20px;">
-            정지홍 · 김진순<span style="font-size:12px;">의 장남</span> 성욱<br>
-            강동광 · 김미란<span style="font-size:12px;">의 장녀</span> 나윤
+        따뜻한 마음으로 축하해 주시면<br>더 없는 기쁨으로 간직하겠습니다.<br></span>
+        <br>
+        <div class="mgb-20">
+            정지홍 · 김진순<span class="ft-12">의 장남</span> 성욱<br>
+            강동광 · 김미란<span class="ft-12">의 장녀</span> 나윤
         </div>
     </div>
     <?}?>
     <div id="trigger_2"></div>
-    <div style="height:50px;"></div>
+    <div class="hgt-50"></div>
     <div id="top_pin" class="box">
-        <div style="font-size:20px; text-align: center;"><span style="font-family: Parisienne,serif;">wedding ceremony</span></div>
-        <div style="font-size:20px; text-align: center;">정성욱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: Parisienne,serif;">and</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강나윤</div>
+        <div class="ft-20 txt-center"><span class="paris">wedding ceremony</span></div>
+        <div class="ft-20 txt-center">정성욱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="paris">and</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강나윤</div>
     </div>
     <div id="pin_top"></div>
 
-    <div style="height:650px;">
-        <div style="position: relative;">
+    <div class="hgt-750">
+        <div class="po-rel">
             <img id="myimg" src="./img/sequence/1.jpg" alt="scroll_img">
         </div>
 
-        <div style="height:600px;"></div>
-        <div id="pin_middle" style="height:54px; display:none;"></div>
+        <div class="hgt-700"></div>
+        <div id="pin_middle" class="hgt-54" style="display:none;"></div>
         <div id="middle_pin" class="box">
-            <div style="font-size:17px; text-align: center;">2024.03.30 토 17:20PM</div>
-            <div style="font-size:17px; text-align: center;">강서 더베뉴지서울 네이처홀</div>
+            <div class="ft-17 txt-center">2024.03.30 토 17:20PM</div>
+            <div class="ft-17 txt-center">강서 더베뉴지서울 네이처홀</div>
         </div>
     </div>
 
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
-        <div class="block_cover" style="position: absolute; top:0; left:0; width:100%; height:600px; z-index: 3;"></div>
+        <div class="block_cover"></div>
         <div class="datepicker">
             <div class="datepicker-header"></div>
         </div>
         <!--결혼식까지-->
-        <div  style="text-align:center;">
+        <div class="txt-center">
             <span class="title_txt">&nbsp;&nbsp;&nbsp;- 결혼식까지 -&nbsp;&nbsp;&nbsp;</span><br><br>
         </div>
         <div class="neon d-day"></div>
-        <div><span style="font-family: Parisienne,serif;">Wedding</span></div>
+        <div><span class="paris">Wedding</span></div>
     </div>
 
 
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
         <!--주차 안내-->
-        <div style="text-align:center;">
+        <div class="txt-center">
             <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 주차 안내 -&nbsp;&nbsp;&nbsp;</span><br>
             지하 2층 ~ 지상 5층 까지,<br>약 1,200대 주차 공간이 마련 되어 있습니다.<br>
-            2시간 무료 주차 가능합니다.<br><br><br>
+            2시간 무료 주차 가능합니다.<br><br>
 
             <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 교통 안내 -&nbsp;&nbsp;&nbsp;</span><br>
-            <div style="text-align: left; padding:0px 15px 5px 15px;">
-                <div style="border-top: 1px solid #dddddd; margin-top: 20px;">
-                    <div style="font-weight:600; font-size:17px; margin:10px 0 10px 0;">지하철안내</div>
-                    <span style="color:#996CAC">5호선</span> 발산역 3번출구 도보 3분 거리
+            <div class="trans_padding txt-left">
+                <div class="trans_head">
+                    <div class="trans_marker">지하철안내</div>
+                    <span class="trans_line5">5호선</span> 발산역 3번출구 도보 3분 거리
                 </div>
-                <div style="border-top: 1px solid #dddddd; margin-top: 20px;">
-                    <div style="font-weight:600; font-size:17px; margin:10px 0 10px 0;">버스안내</div>
-                    <span style="color:#0068b7">간선</span> : 652<span style="margin:3px 4px 0;">|</span>601<span style="margin:3px 4px 0;">|</span>661<span style="margin:3px 4px 0;">|</span>605<span style="margin:3px 4px 0;">|</span>654<br>
-                    <span style="color:#53b332">지선</span> : 6630<span style="margin:3px 4px 0;">|</span>6632<span style="margin:3px 4px 0;">|</span>6645<span style="margin:3px 4px 0;">|</span>6657<span style="margin:3px 4px 0;">|</span>6642<span style="margin:3px 4px 0;">|</span>6712<br>
-                    <span style="color:#53b332">마을</span> : 강서05<span style="margin:3px 4px 0;">|</span>강서06<br>
-                    <span style="color:#33CC99">일반</span> : 1002<span style="margin:3px 4px 0;">|</span>60<span style="margin:3px 4px 0;">|</span>60-3<span style="margin:3px 4px 0;">|</span>88<br>
-                    <span style="color:#964b00">공항</span> : 6003<span style="margin:3px 4px 0;">|</span>6008<br>
-                    <span style="color:#e60012">직행</span> : 3000
+                <div class="trans_head">
+                    <div class="trans_marker">버스안내</div>
+                    <span class="trans_blue">간선</span> : 652<span class="trans_border">|</span>601<span class="trans_border">|</span>661<span class="trans_border">|</span>605<span class="trans_border">|</span>654<br>
+                    <span class="trans_green">지선</span> : 6630<span class="trans_border">|</span>6632<span class="trans_border">|</span>6645<span class="trans_border">|</span>6657<span class="trans_border">|</span>6642<span class="trans_border">|</span>6712<br>
+                    <span class="trans_village">마을</span> : 강서05<span class="trans_border">|</span>강서06<br>
+                    <span class="trans_normal">일반</span> : 1002<span class="trans_border">|</span>60<span class="trans_border">|</span>60-3<span class="trans_border">|</span>88<br>
+                    <span class="trans_airport">공항</span> : 6003<span class="trans_border">|</span>6008<br>
+                    <span class="trans_direct">직행</span> : 3000
                 </div>
 
             </div>
@@ -161,44 +159,44 @@ $mode = $_GET['mode'];
     </div>
 
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
-        <div style="text-align:center;">
+        <div class="txt-center">
             <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 오시는 길 -&nbsp;&nbsp;&nbsp;</span><br><br>
         </div>
-        <div style="display: flex; justify-content:center; text-align: left; padding: 0 15px 0 15px; align-items: center;">
-            <div style="font-size:14px; width: 80%; margin-bottom:20px;">
-                <span style="font-weight: 500; font-size:17px; color:#111111;">더베뉴지서울 1층 네이처홀</span><br>
+        <div class="direction_div">
+            <div class="direction_head">
+                <span class="direction_info">더베뉴지서울 1층 네이처홀</span><br>
                 서울특별시 강서구 등촌제3동 강서로 388<br>
                 Tel. 02-2657-2100
             </div>
-            <div style="display: flex; justify-content: center; width: 20%;">
-                <div style="border-radius: 30px; background-color: #ffeedd; width: 85%; height: 50px; display: flex; justify-content: center; align-items: center;">
+            <div class="direction_body">
+                <div class="direction_body-tel">
                     <a href="tel:02-2657-2100">
-                    <img src="./img/dist/phone.png" alt="phone" style="width:25px; height:25px; vertical-align: middle;">
+                    <img class="direction_body-img" src="./img/dist/phone.png" alt="phone">
                     </a>
                 </div>
             </div>
 
         </div>
-        <div class="block_cover" id="block_map" style="position: absolute; top:130px; left:0; width:100%; height:370px; z-index: 3;"></div>
-        <div id="navi_map" style="width:100%; height:400px;"></div>
-        <div style="height:25px;"></div>
-        <div style="display: flex; justify-content: center;">
+        <div class="block_cover" id="block_map"></div>
+        <div id="navi_map"></div>
+        <div class="hgt-25"></div>
+        <div class="map_div">
             <button id="toggled1" class="button-10 map_toggled" onclick="setDraggable(true)">지도 이동 켜기</button>
             <button id="toggled2" class="button-10 map_toggled toggle_selected" onclick="setDraggable(false)">지도 이동 끄기</button>
         </div>
-        <div style="height:25px;"></div>
-        <div style="display: flex; align-items: center; justify-content: center; font-size:13px;">
-            <div style="margin:0 12px 0 12px;"><a href="https://surl.tmobiapi.com/1380fa8f" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="./img/dist/tmap.jpg"></a><br>티맵</div>
-            <div style="margin:0 12px 0 12px;"><a href="https://place.map.kakao.com/m/8700757" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="./img/dist/kakaonavi.jpg"></a><br>카카오네비</div>
-            <div style="margin:0 12px 0 12px;"><a href="https://naver.me/xpaA3PA3" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="./img/dist/navermap.jpg"></a><br>네이버지도</div>
-            <div style="margin:0 12px 0 12px;"><a href="https://kko.to/3Cer6cVET_" target="_blank"><img style="width: 60px; height:auto; border:1px solid #aaaaaa; border-radius:15px; " src="./img/dist/kakaomap.jpg"></a><br>카카오맵</div>
+        <div class="hgt-25"></div>
+        <div class="map_navi">
+            <div class="map_navi-menu"><a href="https://surl.tmobiapi.com/1380fa8f" target="_blank"><img src="./img/dist/tmap.jpg" alt="티맵"></a><br>티맵</div>
+            <div class="map_navi-menu"><a href="https://place.map.kakao.com/m/8700757" target="_blank"><img src="./img/dist/kakaonavi.jpg" alt="카카오네비"></a><br>카카오네비</div>
+            <div class="map_navi-menu"><a href="https://naver.me/xpaA3PA3" target="_blank"><img src="./img/dist/navermap.jpg" alt="네이버지도"></a><br>네이버지도</div>
+            <div class="map_navi-menu"><a href="https://kko.to/3Cer6cVET_" target="_blank"><img src="./img/dist/kakaomap.jpg" alt="카카오맵"></a><br>카카오맵</div>
         </div>
-        <div style="height:40px;"></div>
+        <div class="hgt-40"></div>
     </div>
 
     <!--갤러리-->
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
-        <div style="text-align:center;"><span style="font-family: Parisienne,serif;">Gallery</span></div>
+        <div class="txt-center"><span class="paris">Gallery</span></div>
         <div class="" data-wow-duration="1.5s">
             <div class="cover_gallery">
                 <a class="gallery_cover" data-fancybox="gallery" href="./img/gallery/1.jpg">
@@ -233,12 +231,14 @@ $mode = $_GET['mode'];
     </div>
 
     <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
-        <div style="text-align:center;">
+        <div class="txt-center">
             <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 마음 전할 곳 -&nbsp;&nbsp;&nbsp;</span><br><br>
         </div>
-        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+        <div class="heart">
+            <? if($parentK !== "on"){ ?>
             <button id="groom" class="button-10 openModal">신랑(정성욱) 측 🤵🏻</button>
-            <?if($parentJ !== "on"){?>
+            <?}?>
+            <? if($parentJ !== "on"){ ?>
             <button id="bride" class="button-10 openModal">신부(강나윤) 측 👰🏻</button>
             <?}?>
         </div>
@@ -260,16 +260,16 @@ $mode = $_GET['mode'];
                 </div>
                 <div class="main-middle">
                     <div class="accountBox">카카오페이 바로 송금&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                    <div class="accountCopy"><a id="kakaoPayLink" href="https://link.kakaopay.com/_/TdZDkIe"><img alt="카카오페이_송금하기" src="./img/dist/btn_send_small.png" style="width:112px; height:auto;"></a></div>
+                    <div class="accountCopy"><a id="kakaoPayLink" href="https://link.kakaopay.com/_/TdZDkIe"><img class="pay_img" alt="카카오페이_송금하기" src="./img/dist/btn_send_small.png"></a></div>
                 </div>
-                <div class="main-top" id="memD">아버지 정지홍</div>
+                <div class="main-top" id="memD">부 정지홍</div>
                 <div class="main-middle">
                     <div class="accountBox"  id="memD_accountInfo">우리은행 12345-12334-2343</div>
                     <input type="hidden" id="memD_accountInfoNum" value="">
 
                     <div class="accountCopy" id="memD_accountCopy"><button class="button-10 btn" data-clipboard-target="#memD_accountInfoNum">복사</button></div>
                 </div>
-                <div class="main-top" id="memM">어머니 김진순</div>
+                <div class="main-top" id="memM">모 김진순</div>
                 <div class="main-middle">
                     <div class="accountBox"  id="memM_accountInfo">신한은행 5876-56-76978&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                     <input type="hidden" id="memM_accountInfoNum" value="">
@@ -279,43 +279,21 @@ $mode = $_GET['mode'];
         </div>
     </div>
 
-    <div class="cover wow animate__fadeInUp" data-wow-duration="1.5s">
-        <div style="text-align:center;">
-            <span class="title_txt">&nbsp;&nbsp;&nbsp;&nbsp;- 축하 메시지 -&nbsp;&nbsp;&nbsp;</span><br><br>
-        </div>
-        <div style="display: flex; justify-content: center; flex-direction: column;">
-            <div>
-                <label>
-                    <textarea> test </textarea>
-                </label>
-            </div>
-            <div>
-                <div>test1</div>
-                <div>test2</div>
-                <div>test3</div>
-                <div>test4</div>
-            </div>
-        </div>
-        <div> 더보기 </div>
-    </div>
-
-
     <!--footer copyright-->
-    <div style="text-align: center;">
-        <div class="easter_egg" style="display:flex; align-items: center; justify-content: center;color:#FFFFFF; font-size: 17px; height: 150px; background-image: url('./img/dist/copyright_bg_img.jpg'); background-size: 100%; background-position: 0 150px; line-height: 30px; margin-bottom: 20px;">
+    <div class="txt-center">
+        <div class="easter_egg">
             항상 좋은 일만 가득하길 바랍니다.<br>
             소중한 시간을 내어 주어 감사합니다.<br>
         </div>
         copyright © all rights reserved, 2024<br>
-        <span style="font-family: Parisienne,serif; font-style: italic;">jung sungwook & Kang nayoon</span>
+        <span class="paris italic">jung sungwook & Kang nayoon</span>
     </div>
-    <div style="height:20px;"></div>
+    <div class="hgt-20"></div>
 
-    <!--<script src="./js/sakura.min.js"></script>-->
-    <script src="./js/base.js"></script>
-    <script src="./js/scrollAction.js"></script>
-    <script src="./js/fancybox.js"></script>
-    <script src="./js/kakaoMaps.js"></script>
+    <script src="./js/base.min.js"></script>
+    <script src="./js/scrollAction.min.js"></script>
+    <script src="./js/fancybox.min.js"></script>
+    <script src="./js/kakaoMaps.min.js"></script>
 </div>
 <div class="preLoad blink">로딩 중 입니다.<br>잠시만 기다려 주세요.</div>
 </body>

@@ -158,10 +158,10 @@ $(function() {
         "accountInfoNum"    : "514202-01-546701",
         "kakaoPayLink"      : "https://link.kakaopay.com/_/TdZDkIe",
         "mem_accountInfo"   : "국민은행 514202-01-546701",
-        "memD"              : "아버지 정지홍 👨",
+        "memD"              : "부 정지홍 👨",
         "memD_accountInfo"  : "우리은행 12345-12334-2343",
         "memD_accountInfoNum": "12345-12334-2343",
-        "memM"              : "어머니 김진순 👩",
+        "memM"              : "모 김진순 👩",
         "memM_accountInfo"  : "신한은행 5876-56-76978&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
         "memM_accountInfoNum": "5876-56-76978",
     }
@@ -172,10 +172,10 @@ $(function() {
         "accountInfoNum"    : "666666-33-787878",
         "kakaoPayLink"      : "https://link.kakaopay.com/_/LcTH9yS",
         "mem_accountInfo"   : "하나은행 514202-01-546701",
-        "memD"              : "아버지 강동광 👨",
+        "memD"              : "부 강동광 👨",
         "memD_accountInfo"  : "우리은행 65498-78451-5252",
         "memD_accountInfoNum": "666666-33-787878",
-        "memM"              : "어머니 김미란 👩",
+        "memM"              : "모 김미란 👩",
         "memM_accountInfo"  : "신한은행 7898-98-12345&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
         "memM_accountInfoNum": "7898-98-12345",
     }
@@ -235,13 +235,7 @@ $(function() {
 
 // windowLoad
 $(window).on('load',function() {
-    /*$('.sakura_cover').sakura();*/
 });
-
-/*$('#stop_sakura').on('click', function() {
-    $('body').sakura('stop');
-    $('body').sakura('stop');
-});*/
 
 //  keydown block
 $(document).keydown(function (e) {
