@@ -97,7 +97,7 @@ $(window).scroll(function(){
         $('.scroll-down').css('display','block');
     }
 
-    if(scrollPosition -30 > middlePin) {
+    if(scrollPosition > middlePin + 20) {
         gsap.to("#middle_pin", { position: 'fixed', top: 61, width: "100%", padding: "0 0 0 0", borderRadius: "0px", boxShadow:"", duration: 0.1, zIndex: 4 });
         $("#pin_middle").css('display','block');
     } else {
