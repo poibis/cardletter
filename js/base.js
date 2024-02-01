@@ -41,7 +41,7 @@ $(function() {
      * ? preload image cache 처리
      *
     **/
-    /*let imgSrcs = [];
+    let imgSrcs = [];
     //const IMG_PRE_URL = "https://www.jswjake.xyz/carletter/img/sequence";
     const IMG_PRE_URL = "https://dn730rlq8l0gj.cloudfront.net/img/sequence";
     for (let i = 1; i < 141; i++) {
@@ -68,7 +68,7 @@ $(function() {
         console.log(endTime - startTime);
     }
 
-    preloadImages();*/
+    preloadImages();
 
     const newDate = new Date(2024, 2, 30,0 ,0, 0);
 
