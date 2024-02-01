@@ -55,13 +55,46 @@ for(let i=1; i<141; i++) {
     images.push('https://dn730rlq8l0gj.cloudfront.net/img/sequence/'+i+'.jpg');
 }
 
+/**
+ * ? preload image cache 처리
+ *
+ **/
+let imgSrcs = [];
+//const IMG_PRE_URL = "https://www.jswjake.xyz/carletter/img/sequence";
+const IMG_PRE_URL = "https://dn730rlq8l0gj.cloudfront.net/img/sequence";
+for (let i = 1; i < 141; i++) {
+    imgSrcs.push(`${IMG_PRE_URL}/`+i+`.jpg`);
+}
+
+function preloadImage(src) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve;
+        img.onerror = reject;
+    })
+}
+
+async function preloadImages() {
+    const startTime = new Date().getTime();
+    $(".standBy").css("display","none");
+    await
+        Promise.all(imgSrcs.map(preloadImage));
+    const endTime = new Date().getTime();
+    $(".standBy").fadeIn(2500);
+    $(".preLoad").css("display","none");
+    console.log(endTime - startTime);
+}
+preloadImages();
+
+
 // TweenMax can tween any property of any object. We use this object to cycle through the array
 let obj = {curImg: 0};
 
 // create tween
 let imgTween = gsap.timeline();
 
-const packageObj = imgTween.to(obj, 0.1,
+const packageObj = imgTween.to(obj, 1,
     {
         curImg: images.length - 1,	        // animate proper curImg to number of images
         roundProps: "curImg",				// only integers so it can be used as an array index
@@ -69,7 +102,7 @@ const packageObj = imgTween.to(obj, 0.1,
         immediateRender: true,			    // load first image automatically
         //ease: Linear.easeNone,			// show every image the same amount of time
         onUpdate: function () {
-            $("#myimg").attr("src", images[obj.curImg]); // set the image source
+            $("#myimg").attr("src", imgSrcs[obj.curImg]); // set the image source
         }
     },
 );
