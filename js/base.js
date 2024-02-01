@@ -11,7 +11,7 @@ $(function() {
     // window.scrollTo(0,0);
 
     // const audioSource = "./resource/Liebeheim.mp3";
-    const audioSource = "./resource/BeautyAndTheBeast.mp3";
+    const audioSource = "https://dn730rlq8l0gj.cloudfront.net/resource/BeautyAndTheBeast.mp3";
     const bg_audio = new Audio();
     bg_audio.autoplay       = true;
     bg_audio.src            = audioSource;
@@ -23,11 +23,11 @@ $(function() {
         const volume = document.querySelector(".vol_control");
         if(volume.dataset.icon === "ON") {
             volume.dataset.icon = "OFF";
-            $(this).attr('src',"./img/dist/mute.png");
+            $(this).attr('src',"https://dn730rlq8l0gj.cloudfront.net/img/dist/mute.png");
             bg_audio.pause();
         } else {
             volume.dataset.icon = "ON";
-            $(this).attr('src',"./img/dist/volume.png");
+            $(this).attr('src',"https://dn730rlq8l0gj.cloudfront.net/img/dist/volume.png");
             bg_audio.play().then(r => {
                 console.log(r);
             }).catch((e)=>{
@@ -43,7 +43,7 @@ $(function() {
     **/
     let imgSrcs = [];
     //const IMG_PRE_URL = "https://www.jswjake.xyz/carletter/img/sequence";
-    const IMG_PRE_URL = "./img/sequence";
+    const IMG_PRE_URL = "https://dn730rlq8l0gj.cloudfront.net/img/sequence";
     for (let i = 1; i < 141; i++) {
         imgSrcs.push(`${IMG_PRE_URL}/`+i+`.jpg`);
     }
