@@ -49,9 +49,10 @@ const middlePin    = $('#middle_pin').offset().top;
 
 // define images
 let images = [];
+const env_url = "<?=$env_url?>";
 for(let i=1; i<141; i++) {
     //i = i<10 ? '0'+i : i;
-    images.push('<?=$env_url?>/img/sequence/'+i+'.jpg');
+    images.push(env_url+'/img/sequence/'+i+'.jpg');
 }
 
 // TweenMax can tween any property of any object. We use this object to cycle through the array
