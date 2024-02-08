@@ -161,29 +161,29 @@ $(function() {
     const groomAry = {
         "info"              : "신랑",
         "name"              : "정성욱 🤵🏻",
-        "accountInfoNum"    : "514202-01-546701",
+        "accountInfoNum"    : "51420201546701",
         "kakaoPayLink"      : "https://link.kakaopay.com/_/TdZDkIe",
         "mem_accountInfo"   : "국민은행 514202-01-546701",
         "memD"              : "부 정지홍 👨",
-        "memD_accountInfo"  : "우리은행 12345-12334-2343",
-        "memD_accountInfoNum": "12345-12334-2343",
+        "memD_accountInfo"  : "우리은행 1002-839-120089",
+        "memD_accountInfoNum": "1002839120089",
         "memM"              : "모 김진순 👩",
-        "memM_accountInfo"  : "신한은행 5876-56-76978&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
-        "memM_accountInfoNum": "5876-56-76978",
+        "memM_accountInfo"  : "신한은행 110-047-311225&nbsp;&nbsp;&nbsp;&nbsp;",
+        "memM_accountInfoNum": "110047311225",
     }
 
     const brideAry = {
         "info"              : "신부",
         "name"              : "강나윤 👰🏻",
-        "accountInfoNum"    : "666666-33-787878",
+        "accountInfoNum"    : "19460204099497",
         "kakaoPayLink"      : "https://link.kakaopay.com/_/LcTH9yS",
-        "mem_accountInfo"   : "하나은행 514202-01-546701",
+        "mem_accountInfo"   : "국민은행 194602-04-099497",
         "memD"              : "부 강동광 👨",
-        "memD_accountInfo"  : "우리은행 65498-78451-5252",
-        "memD_accountInfoNum": "666666-33-787878",
+        "memD_accountInfo"  : "하나은행 225-890493-63307",
+        "memD_accountInfoNum": "22589049363307",
         "memM"              : "모 김미란 👩(예금주: 강대윤)",
-        "memM_accountInfo"  : "신한은행 7898-98-12345&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
-        "memM_accountInfoNum": "7898-98-12345",
+        "memM_accountInfo"  : "기업은행 010-7178-5832&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;",
+        "memM_accountInfoNum": "01071785832",
     }
     function clearAccountInfo() {
         $("#accountInfo").html("");
