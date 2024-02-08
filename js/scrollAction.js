@@ -32,14 +32,13 @@ new ScrollMagic.Scene({
 
 // mode version
 let tween_mode = gsap.timeline();
-tween_mode.to(".cover_div_1", {width: '90%', duration:800});
+tween_mode.to(".cover_div_1", {width: '90%', duration:300});
 
 new ScrollMagic.Scene({
     triggerElement: "#trigger_1-1",
     duration: 300,
     triggerHook: "0",
 })
-    .setPin(".pin_div_1", {pushFollowers:true})
     .setTween(tween_mode)
     .addTo(controller)
 // mode version
