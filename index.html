@@ -92,10 +92,20 @@ $env_url = $hostname === 'localhost' ? "." : "https://dn730rlq8l0gj.cloudfront.n
         <div class="cover_div_1 filter1"></div>
     </div>
     <div class="cover wow animate__fadeInUp line-hgt33" data-wow-duration="1.5s">
+        <?if($parentJ != "on"){?>
         <span class="inline-txt17">❤️<br>함께하는 6번째 봄.<br>
         믿음과 사랑으로<br>한 가정을 이루고자<br>
         소중한분들을 모시고<br>혼인의 서약을 맺으려 합니다.<br>
         따뜻한 마음으로 축하해 주시면<br>더 없는 기쁨으로 간직하겠습니다.<br></span>
+        <?}else{?>
+        <span class="inline-txt17">❤️<br>혼주<br>
+        혼주<br>
+        혼주<br>혼주<br>
+        혼주<br>혼주<br>혼주<br>혼주<br>
+        혼주<br>혼주<br>혼주<br>
+        혼주<br>
+        혼주<br>혼주<br></span>
+        <?}?>
         <br>
         <div class="mgb-20">
             정지홍 · 김진순<span class="ft-12">의 장남</span> 성욱<br>
@@ -260,6 +270,7 @@ $env_url = $hostname === 'localhost' ? "." : "https://dn730rlq8l0gj.cloudfront.n
                 <div><span id="closeModal" class="close-btn">X</span></div>
             </div>
             <div class="content-main">
+                <?if($parentJ != 'on'){?>
                 <div class="main-top" id="mem">신랑 정성욱</div>
                 <div class="main-middle">
                     <div class="accountBox"  id="mem_accountInfo">국민은행 514202-01-546701</div>
@@ -270,6 +281,7 @@ $env_url = $hostname === 'localhost' ? "." : "https://dn730rlq8l0gj.cloudfront.n
                     <div class="accountBox">카카오페이 바로 송금&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                     <div class="accountCopy"><a id="kakaoPayLink" href="https://link.kakaopay.com/_/TdZDkIe"><img class="pay_img" alt="카카오페이_송금하기" src="<?=$env_url?>/img/dist/btn_send_small.png"></a></div>
                 </div>
+                <?}?>
                 <div class="main-top" id="memD">부 정지홍</div>
                 <div class="main-middle">
                     <div class="accountBox"  id="memD_accountInfo">우리은행 1002-839-120089</div>
