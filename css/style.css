@@ -22,6 +22,15 @@ html {
     scroll-behavior: smooth;
     margin : 0 auto;
 }
+
+@media screen and (min-width: 1025px) {
+    html {
+        max-width: 480px;
+    }
+    #top_pin, #middle_pin {
+        max-width: 480px;
+    }
+}
 a { text-decoration-line: none; }
 
 /* #fffaf5

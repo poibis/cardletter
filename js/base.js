@@ -4,7 +4,8 @@ $(function() {
     // mobile only check
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // 안드로이드 아이폰을 검사해 체크
     if(!isMobile) {
-        location.href="https://www.naver.com";
+        // location.href="https://www.naver.com";
+        //  임시요청으로 해제
     }
 
     /* start at top 0 */
